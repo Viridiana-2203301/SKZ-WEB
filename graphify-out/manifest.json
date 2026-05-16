@@ -20,8 +20,18 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\js\\app.js": {
-    "mtime": 1778902672.368667,
-    "ast_hash": "93b96c4faf0613ed7b76d9c8ec0fef94",
+    "mtime": 1778906986.8753202,
+    "ast_hash": "a2b7e35b0e6345ed1a6d3f808dbd3492",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\js\\config.example.js": {
+    "mtime": 1778906986.7007105,
+    "ast_hash": "1a4f3760bc3b61ef343df9a7fdc145a5",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\js\\config.js": {
+    "mtime": 1778907003.130299,
+    "ast_hash": "1a4f3760bc3b61ef343df9a7fdc145a5",
     "semantic_hash": ""
   },
   "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\js\\dashboard.js": {
@@ -30,48 +40,48 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\js\\youtube.js": {
-    "mtime": 1778902827.7596357,
-    "ast_hash": "ef489e93f88fc5b399c2e37bdc99408f",
+    "mtime": 1778906986.7939491,
+    "ast_hash": "d41eefe3df15c7314053dc5b9ddf2b42",
     "semantic_hash": ""
   },
   "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\dashboard.html": {
-    "mtime": 1778902683.8257847,
-    "ast_hash": "bbd175b8193a71081e7fdccf85b9c607",
+    "mtime": 1778906987.0799997,
+    "ast_hash": "89e4a1b3fbc4505a1599e0e3ac1c96e4",
     "semantic_hash": ""
   },
   "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\index.html": {
-    "mtime": 1778902637.538036,
-    "ast_hash": "dd3604505956e266dab858cceea79e6f",
+    "mtime": 1778906986.978983,
+    "ast_hash": "493cea554d595c643e9cc7c2cb5d3900",
     "semantic_hash": ""
   },
   "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\README.md": {
-    "mtime": 1778902855.458778,
-    "ast_hash": "ea417099d35e25156b549937f94e26fa",
+    "mtime": 1778907003.2063024,
+    "ast_hash": "9d0497e0da1e6121e8672cf39f42d93e",
     "semantic_hash": ""
   },
   "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\pages\\ate.html": {
-    "mtime": 1778902782.7554984,
-    "ast_hash": "746fda2341d7f1b704ad4d320ba3e1ce",
+    "mtime": 1778906987.176782,
+    "ast_hash": "3c1e268e6e74cd12cbfc990f807bb986",
     "semantic_hash": ""
   },
   "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\pages\\maxident.html": {
-    "mtime": 1778902796.8872216,
-    "ast_hash": "7cfd17d77d7848b60568e1dc75263707",
+    "mtime": 1778906987.273707,
+    "ast_hash": "b4a40330fa83a4c7c18eb4b3da8adbd0",
     "semantic_hash": ""
   },
   "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\pages\\noeasy.html": {
-    "mtime": 1778902734.6209917,
-    "ast_hash": "3af44c220a8f8ccb9c7102ce1386ba0b",
+    "mtime": 1778906987.3614721,
+    "ast_hash": "ca0a69103a08eab36d48029d404aa38c",
     "semantic_hash": ""
   },
   "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\pages\\oddinary.html": {
-    "mtime": 1778902752.3519938,
-    "ast_hash": "03b9d2ea8df6bc6ca24204319cfc75a4",
+    "mtime": 1778906987.477726,
+    "ast_hash": "4cb3d0d266ede10bcc2e50077d0fdb19",
     "semantic_hash": ""
   },
   "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\pages\\rockstar.html": {
-    "mtime": 1778902767.088623,
-    "ast_hash": "81e3dc7049ed37b652090254df685b49",
+    "mtime": 1778906987.5733228,
+    "ast_hash": "b1202c0916bd8782de420af5dc628685",
     "semantic_hash": ""
   }
 }
