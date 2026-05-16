@@ -1,0 +1,589 @@
+{
+  "nodes": [
+    {
+      "id": "js_albums_js",
+      "label": "albums.js",
+      "file_type": "code",
+      "source_file": "js\\albums.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "js_albums_setupnavigation",
+      "label": "setupNavigation()",
+      "file_type": "code",
+      "source_file": "js\\albums.js",
+      "source_location": "L9"
+    },
+    {
+      "id": "js_albums_enhancetracklist",
+      "label": "enhanceTrackList()",
+      "file_type": "code",
+      "source_file": "js\\albums.js",
+      "source_location": "L27"
+    },
+    {
+      "id": "js_albums_animatereviews",
+      "label": "animateReviews()",
+      "file_type": "code",
+      "source_file": "js\\albums.js",
+      "source_location": "L44"
+    },
+    {
+      "id": "js_albums_setuprelatedalbums",
+      "label": "setupRelatedAlbums()",
+      "file_type": "code",
+      "source_file": "js\\albums.js",
+      "source_location": "L53"
+    },
+    {
+      "id": "js_app_js",
+      "label": "app.js",
+      "file_type": "code",
+      "source_file": "js\\app.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "js_app_albums",
+      "label": "albums",
+      "file_type": "code",
+      "source_file": "js\\app.js",
+      "source_location": "L5"
+    },
+    {
+      "id": "js_app_loadalbums",
+      "label": "loadAlbums()",
+      "file_type": "code",
+      "source_file": "js\\app.js",
+      "source_location": "L55"
+    },
+    {
+      "id": "js_app_formatdate",
+      "label": "formatDate()",
+      "file_type": "code",
+      "source_file": "js\\app.js",
+      "source_location": "L75"
+    },
+    {
+      "id": "js_app_setupnavigation",
+      "label": "setupNavigation()",
+      "file_type": "code",
+      "source_file": "js\\app.js",
+      "source_location": "L85"
+    },
+    {
+      "id": "js_app_updateactivelink",
+      "label": "updateActiveLink()",
+      "file_type": "code",
+      "source_file": "js\\app.js",
+      "source_location": "L107"
+    },
+    {
+      "id": "js_app_fetchyoutubevideos",
+      "label": "fetchYouTubeVideos()",
+      "file_type": "code",
+      "source_file": "js\\app.js",
+      "source_location": "L120"
+    },
+    {
+      "id": "js_app_smoothscroll",
+      "label": "smoothScroll()",
+      "file_type": "code",
+      "source_file": "js\\app.js",
+      "source_location": "L138"
+    },
+    {
+      "id": "js_dashboard_js",
+      "label": "dashboard.js",
+      "file_type": "code",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "js_dashboard_initcharts",
+      "label": "initCharts()",
+      "file_type": "code",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L12"
+    },
+    {
+      "id": "js_dashboard_createreleaseschart",
+      "label": "createReleasesChart()",
+      "file_type": "code",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L20"
+    },
+    {
+      "id": "js_dashboard_creategenreschart",
+      "label": "createGenresChart()",
+      "file_type": "code",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L70"
+    },
+    {
+      "id": "js_dashboard_createalbumspopularitychart",
+      "label": "createAlbumsPopularityChart()",
+      "file_type": "code",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L109"
+    },
+    {
+      "id": "js_dashboard_createmonthlychart",
+      "label": "createMonthlyChart()",
+      "file_type": "code",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L159"
+    },
+    {
+      "id": "js_dashboard_loadtimeline",
+      "label": "loadTimeline()",
+      "file_type": "code",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L209"
+    },
+    {
+      "id": "js_dashboard_loadmembersstats",
+      "label": "loadMembersStats()",
+      "file_type": "code",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L264"
+    },
+    {
+      "id": "js_dashboard_formatdate",
+      "label": "formatDate()",
+      "file_type": "code",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L302"
+    },
+    {
+      "id": "js_dashboard_setupnavigation",
+      "label": "setupNavigation()",
+      "file_type": "code",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L312"
+    },
+    {
+      "id": "js_youtube_js",
+      "label": "youtube.js",
+      "file_type": "code",
+      "source_file": "js\\youtube.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "js_youtube_youtube",
+      "label": "YouTube",
+      "file_type": "code",
+      "source_file": "js\\youtube.js",
+      "source_location": "L3"
+    },
+    {
+      "id": "data_albums_json",
+      "label": "albums.json",
+      "file_type": "code",
+      "source_file": "data\\albums.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "data_albums_albums",
+      "label": "albums",
+      "file_type": "code",
+      "source_file": "data\\albums.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "data_albums_members",
+      "label": "members",
+      "file_type": "code",
+      "source_file": "data\\albums.json",
+      "source_location": "L175"
+    },
+    {
+      "id": "data_albums_statistics",
+      "label": "statistics",
+      "file_type": "code",
+      "source_file": "data\\albums.json",
+      "source_location": "L241"
+    },
+    {
+      "id": "data_albums_statistics_debutdate",
+      "label": "debutDate",
+      "file_type": "code",
+      "source_file": "data\\albums.json",
+      "source_location": "L242"
+    },
+    {
+      "id": "data_albums_statistics_agencyname",
+      "label": "agencyName",
+      "file_type": "code",
+      "source_file": "data\\albums.json",
+      "source_location": "L243"
+    },
+    {
+      "id": "data_albums_statistics_membercount",
+      "label": "memberCount",
+      "file_type": "code",
+      "source_file": "data\\albums.json",
+      "source_location": "L244"
+    },
+    {
+      "id": "data_albums_statistics_countries",
+      "label": "countries",
+      "file_type": "code",
+      "source_file": "data\\albums.json",
+      "source_location": "L245"
+    },
+    {
+      "id": "data_albums_statistics_totalsongs",
+      "label": "totalSongs",
+      "file_type": "code",
+      "source_file": "data\\albums.json",
+      "source_location": "L246"
+    },
+    {
+      "id": "data_albums_statistics_totalalbums",
+      "label": "totalAlbums",
+      "file_type": "code",
+      "source_file": "data\\albums.json",
+      "source_location": "L247"
+    },
+    {
+      "id": "data_albums_statistics_totalvideos",
+      "label": "totalVideos",
+      "file_type": "code",
+      "source_file": "data\\albums.json",
+      "source_location": "L248"
+    }
+  ],
+  "edges": [
+    {
+      "source": "js_albums_js",
+      "target": "js_albums_setupnavigation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\albums.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "js_albums_js",
+      "target": "js_albums_enhancetracklist",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\albums.js",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "js_albums_js",
+      "target": "js_albums_animatereviews",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\albums.js",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "js_albums_js",
+      "target": "js_albums_setuprelatedalbums",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\albums.js",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app_js",
+      "target": "js_app_albums",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\app.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app_js",
+      "target": "js_app_loadalbums",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\app.js",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app_js",
+      "target": "js_app_formatdate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\app.js",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app_js",
+      "target": "js_app_setupnavigation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\app.js",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app_js",
+      "target": "js_app_updateactivelink",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\app.js",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app_js",
+      "target": "js_app_fetchyoutubevideos",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\app.js",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app_js",
+      "target": "js_app_smoothscroll",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\app.js",
+      "source_location": "L138",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app_setupnavigation",
+      "target": "js_app_updateactivelink",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\app.js",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "js_dashboard_js",
+      "target": "js_dashboard_initcharts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "js_dashboard_js",
+      "target": "js_dashboard_createreleaseschart",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "js_dashboard_js",
+      "target": "js_dashboard_creategenreschart",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "js_dashboard_js",
+      "target": "js_dashboard_createalbumspopularitychart",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "js_dashboard_js",
+      "target": "js_dashboard_createmonthlychart",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L159",
+      "weight": 1.0
+    },
+    {
+      "source": "js_dashboard_js",
+      "target": "js_dashboard_loadtimeline",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L209",
+      "weight": 1.0
+    },
+    {
+      "source": "js_dashboard_js",
+      "target": "js_dashboard_loadmembersstats",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L264",
+      "weight": 1.0
+    },
+    {
+      "source": "js_dashboard_js",
+      "target": "js_dashboard_formatdate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L302",
+      "weight": 1.0
+    },
+    {
+      "source": "js_dashboard_js",
+      "target": "js_dashboard_setupnavigation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L312",
+      "weight": 1.0
+    },
+    {
+      "source": "js_dashboard_initcharts",
+      "target": "js_dashboard_createreleaseschart",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "js_dashboard_initcharts",
+      "target": "js_dashboard_creategenreschart",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "js_dashboard_initcharts",
+      "target": "js_dashboard_createalbumspopularitychart",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "js_dashboard_initcharts",
+      "target": "js_dashboard_createmonthlychart",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\dashboard.js",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "js_youtube_js",
+      "target": "js_youtube_youtube",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js\\youtube.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "data_albums_json",
+      "target": "data_albums_albums",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data\\albums.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "data_albums_json",
+      "target": "data_albums_members",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data\\albums.json",
+      "source_location": "L175",
+      "weight": 1.0
+    },
+    {
+      "source": "data_albums_json",
+      "target": "data_albums_statistics",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data\\albums.json",
+      "source_location": "L241",
+      "weight": 1.0
+    },
+    {
+      "source": "data_albums_statistics",
+      "target": "data_albums_statistics_debutdate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data\\albums.json",
+      "source_location": "L242",
+      "weight": 1.0
+    },
+    {
+      "source": "data_albums_statistics",
+      "target": "data_albums_statistics_agencyname",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data\\albums.json",
+      "source_location": "L243",
+      "weight": 1.0
+    },
+    {
+      "source": "data_albums_statistics",
+      "target": "data_albums_statistics_membercount",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data\\albums.json",
+      "source_location": "L244",
+      "weight": 1.0
+    },
+    {
+      "source": "data_albums_statistics",
+      "target": "data_albums_statistics_countries",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data\\albums.json",
+      "source_location": "L245",
+      "weight": 1.0
+    },
+    {
+      "source": "data_albums_statistics",
+      "target": "data_albums_statistics_totalsongs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data\\albums.json",
+      "source_location": "L246",
+      "weight": 1.0
+    },
+    {
+      "source": "data_albums_statistics",
+      "target": "data_albums_statistics_totalalbums",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data\\albums.json",
+      "source_location": "L247",
+      "weight": 1.0
+    },
+    {
+      "source": "data_albums_statistics",
+      "target": "data_albums_statistics_totalvideos",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data\\albums.json",
+      "source_location": "L248",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
