@@ -1,0 +1,31 @@
+{
+  "files": {
+    "code": [
+      "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\.graphify_detect.json",
+      "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\data\\albums.json",
+      "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\js\\albums.js",
+      "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\js\\app.js",
+      "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\js\\dashboard.js",
+      "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\js\\youtube.js"
+    ],
+    "document": [
+      "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\dashboard.html",
+      "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\index.html",
+      "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\README.md",
+      "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\pages\\ate.html",
+      "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\pages\\maxident.html",
+      "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\pages\\noeasy.html",
+      "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\pages\\oddinary.html",
+      "C:\\Users\\Virid\\Desktop\\7mo\\Stray_Kids\\SKZ-WEB\\pages\\rockstar.html"
+    ],
+    "paper": [],
+    "image": [],
+    "video": []
+  },
+  "total_files": 14,
+  "total_words": 6286,
+  "needs_graph": false,
+  "warning": "Corpus is ~6,286 words - fits in a single context window. You may not need a graph.",
+  "skipped_sensitive": [],
+  "graphifyignore_patterns": 0
+}
