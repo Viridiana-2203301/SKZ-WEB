@@ -81,11 +81,16 @@ Abre tu navegador en `http://localhost:8000`
 2. Crear un nuevo proyecto
 3. Activar **YouTube Data API v3**
 4. Generar una **API Key**
-5. En `js/youtube.js`, reemplazar:
+5. Copiar `js/config.example.js` como `js/config.js`
+6. En `js/config.js`, reemplazar:
 ```javascript
-const API_KEY = 'YOUR_YOUTUBE_API_KEY';
+window.SKZ_CONFIG = {
+    youtubeApiKey: 'YOUR_YOUTUBE_API_KEY'
+};
 ```
 Con tu clave real.
+
+`js/config.js` esta ignorado por Git para evitar subir claves privadas al repositorio.
 
 ## 🎨 Paleta de Colores
 

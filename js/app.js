@@ -1,5 +1,5 @@
 // App.js - Controlador principal
-const API_KEY = 'YOUR_YOUTUBE_API_KEY'; // Reemplazar con tu clave de API
+const API_KEY = window.SKZ_CONFIG?.youtubeApiKey || 'YOUR_YOUTUBE_API_KEY';
 
 // Datos de álbumes
 const albums = [

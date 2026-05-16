@@ -1,16 +1,16 @@
 # Graph Report - SKZ-WEB  (2026-05-15)
 
 ## Corpus Check
-- 8 files · ~7,375 words
+- 10 files · ~7,412 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 84 nodes · 81 edges · 11 communities (10 shown, 1 thin omitted)
+- 86 nodes · 81 edges · 13 communities (12 shown, 1 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e27204df`
+- Built from commit: `77a209b6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -41,7 +41,7 @@
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
 
-## Communities (11 total, 1 thin omitted)
+## Communities (13 total, 1 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.12
@@ -77,7 +77,7 @@ Nodes (4): 1. **index.html** - Página Principal, 2. **dashboard.html** - Panel 
 
 ### Community 9 - "Community 9"
 Cohesion: 0.67
-Nodes (3): code:javascript (const API_KEY = 'YOUR_YOUTUBE_API_KEY';), 🔧 Configuración, YouTube API
+Nodes (3): code:javascript (window.SKZ_CONFIG = {), 🔧 Configuración, YouTube API
 
 ## Knowledge Gaps
 - **46 isolated node(s):** `nodes`, `edges`, `input_tokens`, `output_tokens`, `code` (+41 more)
@@ -88,11 +88,11 @@ Nodes (3): code:javascript (const API_KEY = 'YOUR_YOUTUBE_API_KEY';), 🔧 Confi
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `🎵 Stray Kids Fanpage - SKZ-WEB` connect `Community 0` to `Community 8`, `Community 9`, `Community 5`?**
-  _High betweenness centrality (0.109) - this node is a cross-community bridge._
+  _High betweenness centrality (0.104) - this node is a cross-community bridge._
 - **Why does `🚀 Inicio Rápido` connect `Community 5` to `Community 0`?**
-  _High betweenness centrality (0.044) - this node is a cross-community bridge._
+  _High betweenness centrality (0.042) - this node is a cross-community bridge._
 - **Why does `🌐 Páginas Principales` connect `Community 8` to `Community 0`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
 - **What connects `nodes`, `edges`, `input_tokens` to the rest of the system?**
   _46 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**

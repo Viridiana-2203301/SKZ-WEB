@@ -382,6 +382,24 @@
       "norm_label": "smoothscroll()"
     },
     {
+      "label": "config.example.js",
+      "file_type": "code",
+      "source_file": "js/config.example.js",
+      "source_location": "L1",
+      "id": "js_config_example_js",
+      "community": 11,
+      "norm_label": "config.example.js"
+    },
+    {
+      "label": "config.js",
+      "file_type": "code",
+      "source_file": "js/config.js",
+      "source_location": "L1",
+      "id": "js_config_js",
+      "community": 12,
+      "norm_label": "config.js"
+    },
+    {
       "label": "dashboard.js",
       "file_type": "code",
       "source_file": "js/dashboard.js",
@@ -616,19 +634,19 @@
       "norm_label": "youtube api"
     },
     {
-      "label": "code:javascript (const API_KEY = 'YOUR_YOUTUBE_API_KEY';)",
+      "label": "code:javascript (window.SKZ_CONFIG = {)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L85",
+      "source_location": "L86",
       "id": "skz_web_readme_codeblock_4",
       "community": 9,
-      "norm_label": "code:javascript (const api_key = 'your_youtube_api_key';)"
+      "norm_label": "code:javascript (window.skz_config = {)"
     },
     {
       "label": "\ud83c\udfa8 Paleta de Colores",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L90",
+      "source_location": "L95",
       "id": "skz_web_readme_paleta_de_colores",
       "community": 0,
       "norm_label": "\ud83c\udfa8 paleta de colores"
@@ -637,7 +655,7 @@
       "label": "\ud83d\udcda Librer\u00edas Utilizadas",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L101",
+      "source_location": "L106",
       "id": "skz_web_readme_librer\u00edas_utilizadas",
       "community": 0,
       "norm_label": "\ud83d\udcda librerias utilizadas"
@@ -646,7 +664,7 @@
       "label": "code:html (<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L104",
+      "source_location": "L109",
       "id": "skz_web_readme_codeblock_5",
       "community": 0,
       "norm_label": "code:html (<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script)"
@@ -655,7 +673,7 @@
       "label": "code:html (<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/aj)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L109",
+      "source_location": "L114",
       "id": "skz_web_readme_codeblock_6",
       "community": 0,
       "norm_label": "code:html (<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/aj)"
@@ -664,7 +682,7 @@
       "label": "\ud83c\udf10 P\u00e1ginas Principales",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L113",
+      "source_location": "L118",
       "id": "skz_web_readme_p\u00e1ginas_principales",
       "community": 8,
       "norm_label": "\ud83c\udf10 paginas principales"
@@ -673,7 +691,7 @@
       "label": "1. **index.html** - P\u00e1gina Principal",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L115",
+      "source_location": "L120",
       "id": "skz_web_readme_1_index_html_p\u00e1gina_principal",
       "community": 8,
       "norm_label": "1. **index.html** - pagina principal"
@@ -682,7 +700,7 @@
       "label": "2. **dashboard.html** - Panel de Control",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L123",
+      "source_location": "L128",
       "id": "skz_web_readme_2_dashboard_html_panel_de_control",
       "community": 8,
       "norm_label": "2. **dashboard.html** - panel de control"
@@ -691,7 +709,7 @@
       "label": "3. **pages/\\*.html** - P\u00e1ginas de \u00c1lbumes",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L130",
+      "source_location": "L135",
       "id": "skz_web_readme_3_pages_html_p\u00e1ginas_de_\u00e1lbumes",
       "community": 8,
       "norm_label": "3. **pages/\\*.html** - paginas de albumes"
@@ -700,7 +718,7 @@
       "label": "\ud83d\udd0d Gr\u00e1ficos del Dashboard",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L136",
+      "source_location": "L141",
       "id": "skz_web_readme_gr\u00e1ficos_del_dashboard",
       "community": 0,
       "norm_label": "\ud83d\udd0d graficos del dashboard"
@@ -709,7 +727,7 @@
       "label": "\ud83d\udcf1 Responsive Design",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L143",
+      "source_location": "L148",
       "id": "skz_web_readme_responsive_design",
       "community": 0,
       "norm_label": "\ud83d\udcf1 responsive design"
@@ -718,7 +736,7 @@
       "label": "\u2728 Caracter\u00edsticas JavaScript",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L151",
+      "source_location": "L156",
       "id": "skz_web_readme_caracter\u00edsticas_javascript",
       "community": 0,
       "norm_label": "\u2728 caracteristicas javascript"
@@ -727,7 +745,7 @@
       "label": "\ud83c\udfaf Pr\u00f3ximas Mejoras",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L160",
+      "source_location": "L165",
       "id": "skz_web_readme_pr\u00f3ximas_mejoras",
       "community": 0,
       "norm_label": "\ud83c\udfaf proximas mejoras"
@@ -736,7 +754,7 @@
       "label": "\ud83d\udcdd Licencia",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L169",
+      "source_location": "L174",
       "id": "skz_web_readme_licencia",
       "community": 0,
       "norm_label": "\ud83d\udcdd licencia"
@@ -745,7 +763,7 @@
       "label": "\ud83e\udd1d Contribuir",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L173",
+      "source_location": "L178",
       "id": "skz_web_readme_contribuir",
       "community": 0,
       "norm_label": "\ud83e\udd1d contribuir"
@@ -754,7 +772,7 @@
       "label": "\ud83d\udce7 Contacto",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L177",
+      "source_location": "L182",
       "id": "skz_web_readme_contacto",
       "community": 0,
       "norm_label": "\ud83d\udce7 contacto"
@@ -767,9 +785,9 @@
       "source_file": ".graphify_ast.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "graphify_ast_json",
-      "target": "skz_web_graphify_ast_nodes",
-      "confidence_score": 1.0
+      "target": "skz_web_graphify_ast_nodes"
     },
     {
       "relation": "contains",
@@ -777,9 +795,9 @@
       "source_file": ".graphify_ast.json",
       "source_location": "L256",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "graphify_ast_json",
-      "target": "skz_web_graphify_ast_edges",
-      "confidence_score": 1.0
+      "target": "skz_web_graphify_ast_edges"
     },
     {
       "relation": "contains",
@@ -787,9 +805,9 @@
       "source_file": ".graphify_ast.json",
       "source_location": "L587",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "graphify_ast_json",
-      "target": "skz_web_graphify_ast_input_tokens",
-      "confidence_score": 1.0
+      "target": "skz_web_graphify_ast_input_tokens"
     },
     {
       "relation": "contains",
@@ -797,9 +815,9 @@
       "source_file": ".graphify_ast.json",
       "source_location": "L588",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "graphify_ast_json",
-      "target": "skz_web_graphify_ast_output_tokens",
-      "confidence_score": 1.0
+      "target": "skz_web_graphify_ast_output_tokens"
     },
     {
       "relation": "contains",
@@ -807,9 +825,9 @@
       "source_file": ".graphify_detect.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "graphify_detect_json",
-      "target": "skz_web_graphify_detect_files",
-      "confidence_score": 1.0
+      "target": "skz_web_graphify_detect_files"
     },
     {
       "relation": "contains",
@@ -817,9 +835,9 @@
       "source_file": ".graphify_detect.json",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "graphify_detect_json",
-      "target": "skz_web_graphify_detect_total_files",
-      "confidence_score": 1.0
+      "target": "skz_web_graphify_detect_total_files"
     },
     {
       "relation": "contains",
@@ -827,9 +845,9 @@
       "source_file": ".graphify_detect.json",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "graphify_detect_json",
-      "target": "skz_web_graphify_detect_total_words",
-      "confidence_score": 1.0
+      "target": "skz_web_graphify_detect_total_words"
     },
     {
       "relation": "contains",
@@ -837,9 +855,9 @@
       "source_file": ".graphify_detect.json",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "graphify_detect_json",
-      "target": "skz_web_graphify_detect_needs_graph",
-      "confidence_score": 1.0
+      "target": "skz_web_graphify_detect_needs_graph"
     },
     {
       "relation": "contains",
@@ -847,9 +865,9 @@
       "source_file": ".graphify_detect.json",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "graphify_detect_json",
-      "target": "skz_web_graphify_detect_warning",
-      "confidence_score": 1.0
+      "target": "skz_web_graphify_detect_warning"
     },
     {
       "relation": "contains",
@@ -857,9 +875,9 @@
       "source_file": ".graphify_detect.json",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "graphify_detect_json",
-      "target": "skz_web_graphify_detect_skipped_sensitive",
-      "confidence_score": 1.0
+      "target": "skz_web_graphify_detect_skipped_sensitive"
     },
     {
       "relation": "contains",
@@ -867,9 +885,9 @@
       "source_file": ".graphify_detect.json",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "graphify_detect_json",
-      "target": "skz_web_graphify_detect_graphifyignore_patterns",
-      "confidence_score": 1.0
+      "target": "skz_web_graphify_detect_graphifyignore_patterns"
     },
     {
       "relation": "contains",
@@ -877,9 +895,9 @@
       "source_file": ".graphify_detect.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_graphify_detect_files",
-      "target": "skz_web_graphify_detect_files_code",
-      "confidence_score": 1.0
+      "target": "skz_web_graphify_detect_files_code"
     },
     {
       "relation": "contains",
@@ -887,9 +905,9 @@
       "source_file": ".graphify_detect.json",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_graphify_detect_files",
-      "target": "skz_web_graphify_detect_files_document",
-      "confidence_score": 1.0
+      "target": "skz_web_graphify_detect_files_document"
     },
     {
       "relation": "contains",
@@ -897,9 +915,9 @@
       "source_file": ".graphify_detect.json",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_graphify_detect_files",
-      "target": "skz_web_graphify_detect_files_paper",
-      "confidence_score": 1.0
+      "target": "skz_web_graphify_detect_files_paper"
     },
     {
       "relation": "contains",
@@ -907,9 +925,9 @@
       "source_file": ".graphify_detect.json",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_graphify_detect_files",
-      "target": "skz_web_graphify_detect_files_image",
-      "confidence_score": 1.0
+      "target": "skz_web_graphify_detect_files_image"
     },
     {
       "relation": "contains",
@@ -917,9 +935,9 @@
       "source_file": ".graphify_detect.json",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_graphify_detect_files",
-      "target": "skz_web_graphify_detect_files_video",
-      "confidence_score": 1.0
+      "target": "skz_web_graphify_detect_files_video"
     },
     {
       "relation": "contains",
@@ -927,9 +945,9 @@
       "source_file": "data/albums.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_albums_json",
-      "target": "data_albums_albums",
-      "confidence_score": 1.0
+      "target": "data_albums_albums"
     },
     {
       "relation": "contains",
@@ -937,9 +955,9 @@
       "source_file": "data/albums.json",
       "source_location": "L175",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_albums_json",
-      "target": "data_albums_members",
-      "confidence_score": 1.0
+      "target": "data_albums_members"
     },
     {
       "relation": "contains",
@@ -947,9 +965,9 @@
       "source_file": "data/albums.json",
       "source_location": "L241",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_albums_json",
-      "target": "data_albums_statistics",
-      "confidence_score": 1.0
+      "target": "data_albums_statistics"
     },
     {
       "relation": "contains",
@@ -957,9 +975,9 @@
       "source_file": "data/albums.json",
       "source_location": "L242",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_albums_statistics",
-      "target": "data_albums_statistics_debutdate",
-      "confidence_score": 1.0
+      "target": "data_albums_statistics_debutdate"
     },
     {
       "relation": "contains",
@@ -967,9 +985,9 @@
       "source_file": "data/albums.json",
       "source_location": "L243",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_albums_statistics",
-      "target": "data_albums_statistics_agencyname",
-      "confidence_score": 1.0
+      "target": "data_albums_statistics_agencyname"
     },
     {
       "relation": "contains",
@@ -977,9 +995,9 @@
       "source_file": "data/albums.json",
       "source_location": "L244",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_albums_statistics",
-      "target": "data_albums_statistics_membercount",
-      "confidence_score": 1.0
+      "target": "data_albums_statistics_membercount"
     },
     {
       "relation": "contains",
@@ -987,9 +1005,9 @@
       "source_file": "data/albums.json",
       "source_location": "L245",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_albums_statistics",
-      "target": "data_albums_statistics_countries",
-      "confidence_score": 1.0
+      "target": "data_albums_statistics_countries"
     },
     {
       "relation": "contains",
@@ -997,9 +1015,9 @@
       "source_file": "data/albums.json",
       "source_location": "L246",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_albums_statistics",
-      "target": "data_albums_statistics_totalsongs",
-      "confidence_score": 1.0
+      "target": "data_albums_statistics_totalsongs"
     },
     {
       "relation": "contains",
@@ -1007,9 +1025,9 @@
       "source_file": "data/albums.json",
       "source_location": "L247",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_albums_statistics",
-      "target": "data_albums_statistics_totalalbums",
-      "confidence_score": 1.0
+      "target": "data_albums_statistics_totalalbums"
     },
     {
       "relation": "contains",
@@ -1017,9 +1035,9 @@
       "source_file": "data/albums.json",
       "source_location": "L248",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_albums_statistics",
-      "target": "data_albums_statistics_totalvideos",
-      "confidence_score": 1.0
+      "target": "data_albums_statistics_totalvideos"
     },
     {
       "relation": "contains",
@@ -1027,9 +1045,9 @@
       "source_file": "js/albums.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_albums_js",
-      "target": "js_albums_setupnavigation",
-      "confidence_score": 1.0
+      "target": "js_albums_setupnavigation"
     },
     {
       "relation": "contains",
@@ -1037,9 +1055,9 @@
       "source_file": "js/albums.js",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_albums_js",
-      "target": "js_albums_enhancetracklist",
-      "confidence_score": 1.0
+      "target": "js_albums_enhancetracklist"
     },
     {
       "relation": "contains",
@@ -1047,9 +1065,9 @@
       "source_file": "js/albums.js",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_albums_js",
-      "target": "js_albums_animatereviews",
-      "confidence_score": 1.0
+      "target": "js_albums_animatereviews"
     },
     {
       "relation": "contains",
@@ -1057,9 +1075,9 @@
       "source_file": "js/albums.js",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_albums_js",
-      "target": "js_albums_setuprelatedalbums",
-      "confidence_score": 1.0
+      "target": "js_albums_setuprelatedalbums"
     },
     {
       "relation": "contains",
@@ -1067,9 +1085,9 @@
       "source_file": "js/app.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_js",
-      "target": "js_app_albums",
-      "confidence_score": 1.0
+      "target": "js_app_albums"
     },
     {
       "relation": "contains",
@@ -1077,9 +1095,9 @@
       "source_file": "js/app.js",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_js",
-      "target": "js_app_loadalbums",
-      "confidence_score": 1.0
+      "target": "js_app_loadalbums"
     },
     {
       "relation": "contains",
@@ -1087,9 +1105,9 @@
       "source_file": "js/app.js",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_js",
-      "target": "js_app_formatdate",
-      "confidence_score": 1.0
+      "target": "js_app_formatdate"
     },
     {
       "relation": "contains",
@@ -1097,9 +1115,9 @@
       "source_file": "js/app.js",
       "source_location": "L85",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_js",
-      "target": "js_app_setupnavigation",
-      "confidence_score": 1.0
+      "target": "js_app_setupnavigation"
     },
     {
       "relation": "contains",
@@ -1107,9 +1125,9 @@
       "source_file": "js/app.js",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_js",
-      "target": "js_app_updateactivelink",
-      "confidence_score": 1.0
+      "target": "js_app_updateactivelink"
     },
     {
       "relation": "contains",
@@ -1117,9 +1135,9 @@
       "source_file": "js/app.js",
       "source_location": "L120",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_js",
-      "target": "js_app_fetchyoutubevideos",
-      "confidence_score": 1.0
+      "target": "js_app_fetchyoutubevideos"
     },
     {
       "relation": "contains",
@@ -1127,9 +1145,9 @@
       "source_file": "js/app.js",
       "source_location": "L138",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_js",
-      "target": "js_app_smoothscroll",
-      "confidence_score": 1.0
+      "target": "js_app_smoothscroll"
     },
     {
       "relation": "calls",
@@ -1138,9 +1156,9 @@
       "source_file": "js/app.js",
       "source_location": "L102",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_app_setupnavigation",
-      "target": "js_app_updateactivelink",
-      "confidence_score": 1.0
+      "target": "js_app_updateactivelink"
     },
     {
       "relation": "contains",
@@ -1148,9 +1166,9 @@
       "source_file": "js/dashboard.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_dashboard_js",
-      "target": "js_dashboard_initcharts",
-      "confidence_score": 1.0
+      "target": "js_dashboard_initcharts"
     },
     {
       "relation": "contains",
@@ -1158,9 +1176,9 @@
       "source_file": "js/dashboard.js",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_dashboard_js",
-      "target": "js_dashboard_createreleaseschart",
-      "confidence_score": 1.0
+      "target": "js_dashboard_createreleaseschart"
     },
     {
       "relation": "contains",
@@ -1168,9 +1186,9 @@
       "source_file": "js/dashboard.js",
       "source_location": "L70",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_dashboard_js",
-      "target": "js_dashboard_creategenreschart",
-      "confidence_score": 1.0
+      "target": "js_dashboard_creategenreschart"
     },
     {
       "relation": "contains",
@@ -1178,9 +1196,9 @@
       "source_file": "js/dashboard.js",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_dashboard_js",
-      "target": "js_dashboard_createalbumspopularitychart",
-      "confidence_score": 1.0
+      "target": "js_dashboard_createalbumspopularitychart"
     },
     {
       "relation": "contains",
@@ -1188,9 +1206,9 @@
       "source_file": "js/dashboard.js",
       "source_location": "L159",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_dashboard_js",
-      "target": "js_dashboard_createmonthlychart",
-      "confidence_score": 1.0
+      "target": "js_dashboard_createmonthlychart"
     },
     {
       "relation": "contains",
@@ -1198,9 +1216,9 @@
       "source_file": "js/dashboard.js",
       "source_location": "L209",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_dashboard_js",
-      "target": "js_dashboard_loadtimeline",
-      "confidence_score": 1.0
+      "target": "js_dashboard_loadtimeline"
     },
     {
       "relation": "contains",
@@ -1208,9 +1226,9 @@
       "source_file": "js/dashboard.js",
       "source_location": "L264",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_dashboard_js",
-      "target": "js_dashboard_loadmembersstats",
-      "confidence_score": 1.0
+      "target": "js_dashboard_loadmembersstats"
     },
     {
       "relation": "contains",
@@ -1218,9 +1236,9 @@
       "source_file": "js/dashboard.js",
       "source_location": "L302",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_dashboard_js",
-      "target": "js_dashboard_formatdate",
-      "confidence_score": 1.0
+      "target": "js_dashboard_formatdate"
     },
     {
       "relation": "contains",
@@ -1228,9 +1246,9 @@
       "source_file": "js/dashboard.js",
       "source_location": "L312",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_dashboard_js",
-      "target": "js_dashboard_setupnavigation",
-      "confidence_score": 1.0
+      "target": "js_dashboard_setupnavigation"
     },
     {
       "relation": "calls",
@@ -1239,9 +1257,9 @@
       "source_file": "js/dashboard.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_dashboard_initcharts",
-      "target": "js_dashboard_createreleaseschart",
-      "confidence_score": 1.0
+      "target": "js_dashboard_createreleaseschart"
     },
     {
       "relation": "calls",
@@ -1250,9 +1268,9 @@
       "source_file": "js/dashboard.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_dashboard_initcharts",
-      "target": "js_dashboard_creategenreschart",
-      "confidence_score": 1.0
+      "target": "js_dashboard_creategenreschart"
     },
     {
       "relation": "calls",
@@ -1261,9 +1279,9 @@
       "source_file": "js/dashboard.js",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_dashboard_initcharts",
-      "target": "js_dashboard_createalbumspopularitychart",
-      "confidence_score": 1.0
+      "target": "js_dashboard_createalbumspopularitychart"
     },
     {
       "relation": "calls",
@@ -1272,9 +1290,9 @@
       "source_file": "js/dashboard.js",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_dashboard_initcharts",
-      "target": "js_dashboard_createmonthlychart",
-      "confidence_score": 1.0
+      "target": "js_dashboard_createmonthlychart"
     },
     {
       "relation": "contains",
@@ -1282,9 +1300,9 @@
       "source_file": "js/youtube.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "js_youtube_js",
-      "target": "js_youtube_youtube",
-      "confidence_score": 1.0
+      "target": "js_youtube_youtube"
     },
     {
       "relation": "contains",
@@ -1292,9 +1310,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_md",
-      "target": "skz_web_readme_stray_kids_fanpage_skz_web",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_stray_kids_fanpage_skz_web"
     },
     {
       "relation": "contains",
@@ -1302,9 +1320,9 @@
       "source_file": "README.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_stray_kids_fanpage_skz_web",
-      "target": "skz_web_readme_caracter\u00edsticas",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_caracter\u00edsticas"
     },
     {
       "relation": "contains",
@@ -1312,9 +1330,9 @@
       "source_file": "README.md",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_stray_kids_fanpage_skz_web",
-      "target": "skz_web_readme_estructura_del_proyecto",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_estructura_del_proyecto"
     },
     {
       "relation": "contains",
@@ -1322,9 +1340,9 @@
       "source_file": "README.md",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_stray_kids_fanpage_skz_web",
-      "target": "skz_web_readme_inicio_r\u00e1pido",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_inicio_r\u00e1pido"
     },
     {
       "relation": "contains",
@@ -1332,9 +1350,9 @@
       "source_file": "README.md",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_stray_kids_fanpage_skz_web",
-      "target": "skz_web_readme_configuraci\u00f3n",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_configuraci\u00f3n"
     },
     {
       "relation": "contains",
@@ -1342,9 +1360,9 @@
       "source_file": "README.md",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_stray_kids_fanpage_skz_web",
-      "target": "skz_web_readme_paleta_de_colores",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_paleta_de_colores"
     },
     {
       "relation": "contains",
@@ -1352,9 +1370,9 @@
       "source_file": "README.md",
       "source_location": "L101",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_stray_kids_fanpage_skz_web",
-      "target": "skz_web_readme_librer\u00edas_utilizadas",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_librer\u00edas_utilizadas"
     },
     {
       "relation": "contains",
@@ -1362,9 +1380,9 @@
       "source_file": "README.md",
       "source_location": "L113",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_stray_kids_fanpage_skz_web",
-      "target": "skz_web_readme_p\u00e1ginas_principales",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_p\u00e1ginas_principales"
     },
     {
       "relation": "contains",
@@ -1372,9 +1390,9 @@
       "source_file": "README.md",
       "source_location": "L136",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_stray_kids_fanpage_skz_web",
-      "target": "skz_web_readme_gr\u00e1ficos_del_dashboard",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_gr\u00e1ficos_del_dashboard"
     },
     {
       "relation": "contains",
@@ -1382,9 +1400,9 @@
       "source_file": "README.md",
       "source_location": "L143",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_stray_kids_fanpage_skz_web",
-      "target": "skz_web_readme_responsive_design",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_responsive_design"
     },
     {
       "relation": "contains",
@@ -1392,9 +1410,9 @@
       "source_file": "README.md",
       "source_location": "L151",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_stray_kids_fanpage_skz_web",
-      "target": "skz_web_readme_caracter\u00edsticas_javascript",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_caracter\u00edsticas_javascript"
     },
     {
       "relation": "contains",
@@ -1402,9 +1420,9 @@
       "source_file": "README.md",
       "source_location": "L160",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_stray_kids_fanpage_skz_web",
-      "target": "skz_web_readme_pr\u00f3ximas_mejoras",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_pr\u00f3ximas_mejoras"
     },
     {
       "relation": "contains",
@@ -1412,9 +1430,9 @@
       "source_file": "README.md",
       "source_location": "L169",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_stray_kids_fanpage_skz_web",
-      "target": "skz_web_readme_licencia",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_licencia"
     },
     {
       "relation": "contains",
@@ -1422,9 +1440,9 @@
       "source_file": "README.md",
       "source_location": "L173",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_stray_kids_fanpage_skz_web",
-      "target": "skz_web_readme_contribuir",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_contribuir"
     },
     {
       "relation": "contains",
@@ -1432,9 +1450,9 @@
       "source_file": "README.md",
       "source_location": "L177",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_stray_kids_fanpage_skz_web",
-      "target": "skz_web_readme_contacto",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_contacto"
     },
     {
       "relation": "contains",
@@ -1442,9 +1460,9 @@
       "source_file": "README.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_estructura_del_proyecto",
-      "target": "skz_web_readme_codeblock_1",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_codeblock_1"
     },
     {
       "relation": "contains",
@@ -1452,9 +1470,9 @@
       "source_file": "README.md",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_inicio_r\u00e1pido",
-      "target": "skz_web_readme_1_clonar_el_repositorio",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_1_clonar_el_repositorio"
     },
     {
       "relation": "contains",
@@ -1462,9 +1480,9 @@
       "source_file": "README.md",
       "source_location": "L58",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_inicio_r\u00e1pido",
-      "target": "skz_web_readme_2_instalar_dependencias",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_2_instalar_dependencias"
     },
     {
       "relation": "contains",
@@ -1472,9 +1490,9 @@
       "source_file": "README.md",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_inicio_r\u00e1pido",
-      "target": "skz_web_readme_3_iniciar_servidor_local",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_3_iniciar_servidor_local"
     },
     {
       "relation": "contains",
@@ -1482,9 +1500,9 @@
       "source_file": "README.md",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_inicio_r\u00e1pido",
-      "target": "skz_web_readme_4_acceder_a_la_p\u00e1gina",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_4_acceder_a_la_p\u00e1gina"
     },
     {
       "relation": "contains",
@@ -1492,9 +1510,9 @@
       "source_file": "README.md",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_1_clonar_el_repositorio",
-      "target": "skz_web_readme_codeblock_2",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_codeblock_2"
     },
     {
       "relation": "contains",
@@ -1502,9 +1520,9 @@
       "source_file": "README.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_3_iniciar_servidor_local",
-      "target": "skz_web_readme_codeblock_3",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_codeblock_3"
     },
     {
       "relation": "contains",
@@ -1512,9 +1530,9 @@
       "source_file": "README.md",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_configuraci\u00f3n",
-      "target": "skz_web_readme_youtube_api",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_youtube_api"
     },
     {
       "relation": "contains",
@@ -1522,9 +1540,9 @@
       "source_file": "README.md",
       "source_location": "L85",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_youtube_api",
-      "target": "skz_web_readme_codeblock_4",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_codeblock_4"
     },
     {
       "relation": "contains",
@@ -1532,9 +1550,9 @@
       "source_file": "README.md",
       "source_location": "L104",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_librer\u00edas_utilizadas",
-      "target": "skz_web_readme_codeblock_5",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_codeblock_5"
     },
     {
       "relation": "contains",
@@ -1542,9 +1560,9 @@
       "source_file": "README.md",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_librer\u00edas_utilizadas",
-      "target": "skz_web_readme_codeblock_6",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_codeblock_6"
     },
     {
       "relation": "contains",
@@ -1552,9 +1570,9 @@
       "source_file": "README.md",
       "source_location": "L115",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_p\u00e1ginas_principales",
-      "target": "skz_web_readme_1_index_html_p\u00e1gina_principal",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_1_index_html_p\u00e1gina_principal"
     },
     {
       "relation": "contains",
@@ -1562,9 +1580,9 @@
       "source_file": "README.md",
       "source_location": "L123",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_p\u00e1ginas_principales",
-      "target": "skz_web_readme_2_dashboard_html_panel_de_control",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_2_dashboard_html_panel_de_control"
     },
     {
       "relation": "contains",
@@ -1572,11 +1590,11 @@
       "source_file": "README.md",
       "source_location": "L130",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "skz_web_readme_p\u00e1ginas_principales",
-      "target": "skz_web_readme_3_pages_html_p\u00e1ginas_de_\u00e1lbumes",
-      "confidence_score": 1.0
+      "target": "skz_web_readme_3_pages_html_p\u00e1ginas_de_\u00e1lbumes"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e27204df595c98952b9d40ee7462324a92d1cfa2"
+  "built_at_commit": "77a209b6cbbb0fa84d7828dd01055cb4ec08c93b"
 }

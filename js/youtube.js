@@ -1,7 +1,7 @@
 // youtube.js - Integración con YouTube API v3
 
 const YouTube = {
-    API_KEY: 'YOUR_YOUTUBE_API_KEY', // Reemplazar con tu clave
+    API_KEY: window.SKZ_CONFIG?.youtubeApiKey || 'YOUR_YOUTUBE_API_KEY',
     BASE_URL: 'https://www.googleapis.com/youtube/v3',
 
     // Buscar videos
