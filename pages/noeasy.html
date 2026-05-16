@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/albums.css">
+    <style>
+        :root {
+            --primary-color: #0055ff;
+            --hover-glow: rgba(0, 85, 255, 0.5);
+            --primary-rgb: 0, 85, 255;
+        }
+
+        .album-hero {
+            height: 70vh;
+        }
+
+        .album-info-section {
+            background: #000000;
+        }
+    </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -19,7 +36,7 @@
             <ul class="nav-menu">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../dashboard.html">Dashboard</a></li>
-                <li><a href="../index.html#albums">Álbumes</a></li>
+                <li><a href="../albums.html">Álbumes</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
             <div class="hamburger">
@@ -31,10 +48,11 @@
     </nav>
 
     <!-- Album Hero -->
-    <header class="album-hero" style="background: linear-gradient(135deg, #FFD700, #000);">
+    <header class="album-hero"
+        style="background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('https://res.cloudinary.com/dhbsp8htx/image/upload/v1778911983/hhh_no941w.jpg'); background-size: cover; background-position: center 58%; background-repeat: no-repeat;">
         <div class="album-hero-content">
             <h1>NOEASY</h1>
-            <p>Primer Mini Álbum</p>
+            <p>Álbum de Estudio (2do)</p>
         </div>
     </header>
 
@@ -43,8 +61,9 @@
         <div class="container">
             <div class="album-info-grid">
                 <div class="album-cover">
-                    <div class="cover-image" style="background: linear-gradient(135deg, #FFD700, #000);">
-                        NOEASY
+                    <div class="cover-image"
+                        style="background-image: url('https://res.cloudinary.com/dhbsp8htx/image/upload/v1778908871/noisy_dny1d1.jpg'); background-size: cover; background-position: center;">
+
                     </div>
                 </div>
                 <div class="album-details">
@@ -55,22 +74,24 @@
                     </div>
                     <div class="info-row">
                         <span class="label">Fecha de Lanzamiento:</span>
-                        <span class="value">13 de Agosto, 2021</span>
+                        <span class="value"> 23 de Agosto, 2021</span>
                     </div>
                     <div class="info-row">
                         <span class="label">Tipo:</span>
-                        <span class="value">Mini Álbum</span>
+                        <span class="value">Álbum de Estudio (2do)</span>
                     </div>
                     <div class="info-row">
                         <span class="label">Canciones:</span>
-                        <span class="value">8 Pistas</span>
+                        <span class="value">14 Pistas</span>
                     </div>
                     <div class="info-row">
                         <span class="label">Duración:</span>
-                        <span class="value">28 minutos</span>
+                        <span class="value">46 minutos</span>
                     </div>
                     <p class="description">
-                        NOEASY es el primer mini álbum de Stray Kids tras su debut oficial. Marca un nuevo capítulo en la historia del grupo con conceptos innovadores y producciones de alta calidad que muestran la versatilidad musical del grupo.
+                        Segundo álbum de estudio y primer millón-seller de Stray Kids y de JYP Entertainment. Con
+                        "Thunderous" como tema principal, obtuvo 6 victorias en programas musicales. Su concepto gira en
+                        torno a cazadores de monstruos que luchan con el ruido.
                     </p>
                 </div>
             </div>
@@ -85,108 +106,114 @@
                 <div class="track-item">
                     <span class="track-number">01</span>
                     <div class="track-info">
-                        <h4>특 (S-Class)</h4>
-                        <p>Track Introductorio</p>
+                        <h4>CHEESE</h4>
+                        <p>Intro</p>
                     </div>
-                    <span class="track-duration">3:01</span>
+                    <span class="track-duration">--:--</span>
                 </div>
                 <div class="track-item">
                     <span class="track-number">02</span>
                     <div class="track-info">
-                        <h4>NOEASY</h4>
-                        <p>Canción Principal</p>
+                        <h4>Thunderous (소리꾼) ★</h4>
+                        <p>Title Track</p>
                     </div>
-                    <span class="track-duration">3:17</span>
+                    <span class="track-duration">--:--</span>
                 </div>
                 <div class="track-item">
                     <span class="track-number">03</span>
                     <div class="track-info">
-                        <h4>Thunderous</h4>
-                        <p>Segundo Lead</p>
+                        <h4>DOMINO</h4>
+                        <p>B-Side</p>
                     </div>
-                    <span class="track-duration">3:16</span>
+                    <span class="track-duration">--:--</span>
                 </div>
                 <div class="track-item">
                     <span class="track-number">04</span>
                     <div class="track-info">
-                        <h4>S-Class</h4>
-                        <p>Pista Vocal</p>
+                        <h4>SSICK</h4>
+                        <p>B-Side</p>
                     </div>
-                    <span class="track-duration">3:51</span>
+                    <span class="track-duration">--:--</span>
                 </div>
                 <div class="track-item">
                     <span class="track-number">05</span>
                     <div class="track-info">
-                        <h4>Surfin'</h4>
-                        <p>Pista B-Side</p>
+                        <h4>The View</h4>
+                        <p>B-Side</p>
                     </div>
-                    <span class="track-duration">3:43</span>
+                    <span class="track-duration">--:--</span>
                 </div>
                 <div class="track-item">
                     <span class="track-number">06</span>
                     <div class="track-info">
-                        <h4>한 잔의 추억 (A Moment)</h4>
-                        <p>Pista Balada</p>
+                        <h4>Sorry, I Love You</h4>
+                        <p>B-Side</p>
                     </div>
-                    <span class="track-duration">4:02</span>
+                    <span class="track-duration">--:--</span>
                 </div>
                 <div class="track-item">
                     <span class="track-number">07</span>
                     <div class="track-info">
-                        <h4>Cheese</h4>
-                        <p>Pista Vocal</p>
+                        <h4>Silent Cry</h4>
+                        <p>B-Side</p>
                     </div>
-                    <span class="track-duration">3:28</span>
+                    <span class="track-duration">--:--</span>
                 </div>
                 <div class="track-item">
                     <span class="track-number">08</span>
                     <div class="track-info">
-                        <h4>소확행 (S.E.O)</h4>
-                        <p>Pista Instrumental</p>
+                        <h4>Secret Secret</h4>
+                        <p>B-Side</p>
                     </div>
-                    <span class="track-duration">3:15</span>
+                    <span class="track-duration">--:--</span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section class="reviews-section">
-        <div class="container">
-            <h2>Lo que dicen los Fans</h2>
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="track-item">
+                    <span class="track-number">09</span>
+                    <div class="track-info">
+                        <h4>Star Lost</h4>
+                        <p>B-Side</p>
                     </div>
-                    <p>"NOEASY es increíble. La producción, las letras, el concepto. Todo es perfecto. Stray Kids nunca defrauda."</p>
-                    <span class="review-author">- STAYs 2021</span>
+                    <span class="track-duration">--:--</span>
                 </div>
-                <div class="review-card">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="track-item">
+                    <span class="track-number">10</span>
+                    <div class="track-info">
+                        <h4>Red Lights</h4>
+                        <p>Unit</p>
                     </div>
-                    <p>"La versatilidad vocal y la coreografía en NOEASY son de otro nivel. Este mini álbum define una era."</p>
-                    <span class="review-author">- Fan de K-pop Global</span>
+                    <span class="track-duration">--:--</span>
                 </div>
-                <div class="review-card">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="track-item">
+                    <span class="track-number">11</span>
+                    <div class="track-info">
+                        <h4>Surfin'</h4>
+                        <p>Unit</p>
                     </div>
-                    <p>"Cada canción es una joya. NOEASY demuestra por qué Stray Kids es uno de los mejores grupos de K-pop."</p>
-                    <span class="review-author">- STAY Dedicado</span>
+                    <span class="track-duration">--:--</span>
+                </div>
+                <div class="track-item">
+                    <span class="track-number">12</span>
+                    <div class="track-info">
+                        <h4>Gone Away</h4>
+                        <p>Unit</p>
+                    </div>
+                    <span class="track-duration">--:--</span>
+                </div>
+                <div class="track-item">
+                    <span class="track-number">13</span>
+                    <div class="track-info">
+                        <h4>WOLFGANG</h4>
+                        <p>Kingdom</p>
+                    </div>
+                    <span class="track-duration">--:--</span>
+                </div>
+                <div class="track-item">
+                    <span class="track-number">14</span>
+                    <div class="track-info">
+                        <h4>Mixtape: OH (애)</h4>
+                        <p>Mixtape</p>
+                    </div>
+                    <span class="track-duration">--:--</span>
                 </div>
             </div>
         </div>
@@ -198,20 +225,24 @@
             <h2>Otros Álbumes</h2>
             <div class="related-grid">
                 <div class="album-link-card">
-                    <div class="album-link-image" style="background: linear-gradient(135deg, #9D4EDD, #000);">ODDINARY</div>
-                    <a href="oddinary.html" class="album-link-title">ODDINARY</a>
+                    <div class="album-link-image" style="background-image: url('https://res.cloudinary.com/dhbsp8htx/image/upload/v1778908871/noisy_dny1d1.jpg'); background-size: cover; background-position: center; border-radius: 8px;">
+                    </div>
+                    <a href="noeasy.html" class="album-link-title">NOEASY</a>
                 </div>
                 <div class="album-link-card">
-                    <div class="album-link-image" style="background: linear-gradient(135deg, #FF0000, #000);">ROCK-STAR</div>
+                    <div class="album-link-image" style="background-image: url('https://res.cloudinary.com/dhbsp8htx/image/upload/v1778917454/five_eqxjkd.jpg'); background-size: cover; background-position: center; border-radius: 8px;">
+                    </div>
+                    <a href="5star.html" class="album-link-title">5-STAR</a>
+                </div>
+                <div class="album-link-card">
+                    <div class="album-link-image" style="background-image: url('https://res.cloudinary.com/dhbsp8htx/image/upload/v1778909892/rock_wae5u4.jpg'); background-size: cover; background-position: center; border-radius: 8px;">
+                    </div>
                     <a href="rockstar.html" class="album-link-title">ROCK-STAR</a>
                 </div>
                 <div class="album-link-card">
-                    <div class="album-link-image" style="background: linear-gradient(135deg, #0077B6, #000);">ATE</div>
+                    <div class="album-link-image" style="background-image: url('https://res.cloudinary.com/dhbsp8htx/image/upload/v1778909914/ate_hkjrup.jpg'); background-size: cover; background-position: center; border-radius: 8px;">
+                    </div>
                     <a href="ate.html" class="album-link-title">ATE</a>
-                </div>
-                <div class="album-link-card">
-                    <div class="album-link-image" style="background: linear-gradient(135deg, #FF69B4, #000);">MAXIDENT</div>
-                    <a href="maxident.html" class="album-link-title">MAXIDENT</a>
                 </div>
             </div>
         </div>
@@ -251,4 +282,5 @@
     <script src="../js/app.js"></script>
     <script src="../js/albums.js"></script>
 </body>
+
 </html>

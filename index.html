@@ -16,10 +16,10 @@
                 <span>STRAY KIDS</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="#" class="active">Inicio</a></li>
                 <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="#albums">Álbumes</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="albums.html">Álbumes</a></li>
+                <li><a href="#">Contacto</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -30,7 +30,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <header class="hero" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('https://res.cloudinary.com/dhbsp8htx/image/upload/v1778911066/Stray-Kids_i84cuq.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="hero-content">
             <h1>STRAY KIDS</h1>
             <p>S-Class Boy Group from JYP Entertainment</p>
@@ -44,9 +44,12 @@
     <!-- Albums Section -->
     <section id="albums" class="albums-section">
         <div class="container">
-            <h2 class="section-title">Nuestros Álbumes</h2>
-            <div class="albums-grid" id="albumsGrid">
-                <!-- Cargado dinámicamente por app.js -->
+            <h2 class="section-title">Álbumes Populares</h2>
+            <div class="albums-grid" id="albumsGrid" data-featured="true">
+                <!-- Albums are loaded by JavaScript -->
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="albums.html" class="btn-primary">Ver Discografía Completa</a>
             </div>
         </div>
     </section>
@@ -54,15 +57,14 @@
     <!-- Featured Album -->
     <section class="featured-album">
         <div class="container">
+            <h2 class="section-title">Lanzamiento Destacado</h2>
             <div class="featured-content">
-                <div class="featured-image">
-                    <img src="assets/images/maxident.jpg" alt="MAXIDENT" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23000%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22%23f00%22%3EMAXIDENT%3C/text%3E%3C/svg%3E'">
-                </div>
+                <div class="featured-image" style="background-image: url('https://res.cloudinary.com/dhbsp8htx/image/upload/v1778918037/doit_iowcsh.jpg'); background-size: cover; background-position: center; aspect-ratio: 1; border-radius: 8px;"></div>
                 <div class="featured-info">
-                    <h3>MAXIDENT</h3>
-                    <p class="release-date">Lanzamiento: Noviembre 2022</p>
-                    <p class="description">El quinto mini álbum de Stray Kids, marcando su evolución artística con conceptos visuales impactantes y sonidos innovadores.</p>
-                    <a href="pages/maxident.html" class="btn-secondary">Ver Detalles</a>
+                    <h3>DO IT</h3>
+                    <p class="release-date">Lanzamiento: Noviembre 2025</p>
+                    <p class="description">Segundo mixtape y primero de la serie "SKZ IT TAPE". Con los sencillos dobles "Do It" y "DIVINE". Un proyecto íntimo siete años después de su debut.</p>
+                    <a href="pages/doit.html" class="btn-secondary">Ver Detalles</a>
                 </div>
             </div>
         </div>
