@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Stray Kids Stats</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <span>DASHBOARD</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="index.html#albums">Álbumes</a></li>
+                <li><a href="index.html#contact">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <div class="container">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <h1>Dashboard Estadístico</h1>
+                <p>Análisis completo de Stray Kids</p>
+            </header>
+
+            <!-- Stats Overview -->
+            <section class="stats-overview">
+                <div class="stat-overview-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Canciones</h3>
+                        <p class="stat-value">50+</p>
+                    </div>
+                </div>
+                <div class="stat-overview-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Alcance Global</h3>
+                        <p class="stat-value">190 Países</p>
+                    </div>
+                </div>
+                <div class="stat-overview-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Videos</h3>
+                        <p class="stat-value">100+</p>
+                    </div>
+                </div>
+                <div class="stat-overview-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Miembros</h3>
+                        <p class="stat-value">8</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Row 1 -->
+            <section class="charts-grid">
+                <div class="chart-container">
+                    <h3>Lanzamientos por Año</h3>
+                    <canvas id="releasesChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Distribución de Géneros</h3>
+                    <canvas id="genresChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Charts Row 2 -->
+            <section class="charts-grid">
+                <div class="chart-container">
+                    <h3>Popularidad de Álbumes</h3>
+                    <canvas id="albumsPopularityChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Estadísticas Mensuales</h3>
+                    <canvas id="monthlyChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Timeline Section -->
+            <section class="timeline-section">
+                <h2>Línea de Tiempo</h2>
+                <div class="timeline" id="timeline">
+                    <!-- Cargado dinámicamente -->
+                </div>
+            </section>
+
+            <!-- Members Stats -->
+            <section class="members-stats">
+                <h2>Estadísticas por Miembro</h2>
+                <div class="members-stats-grid" id="memberStats">
+                    <!-- Cargado dinámicamente -->
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="recent-activity">
+                <h2>Actividad Reciente</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4>Nuevo Récord de Descargas</h4>
+                            <p>El álbum "MAXIDENT" alcanzó 1 millón de descargas</p>
+                            <span class="activity-date">Hace 3 días</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4>Nuevo Video MV</h4>
+                            <p>Lanzamiento del MV oficial de "특(S-Class)"</p>
+                            <span class="activity-date">Hace 1 semana</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4>Premio Ganado</h4>
+                            <p>Stray Kids ganó "Mejor Performance" en MAMA 2023</p>
+                            <span class="activity-date">Hace 2 semanas</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>STRAY KIDS</h4>
+                    <p>Dashboard de Estadísticas - Todos los derechos reservados</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="https://www.jype.com/">JYPE</a></li>
+                        <li><a href="https://www.youtube.com/@Stray_Kids">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociales</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="footer-bottom">&copy; 2024 Stray Kids Dashboard. Hecho con ❤️</p>
+        </div>
+    </footer>
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

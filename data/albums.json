@@ -1,0 +1,250 @@
+{
+  "albums": [
+    {
+      "id": 1,
+      "title": "NOEASY",
+      "releaseDate": "2021-08-13",
+      "type": "Mini Album",
+      "color": "#FFD700",
+      "description": "Primer mini álbum de Stray Kids tras su debut oficial, marcando un nuevo capítulo en la historia del grupo.",
+      "tracks": [
+        {
+          "number": 1,
+          "title": "특 (S-Class)",
+          "duration": "3:01",
+          "type": "Intro"
+        },
+        {
+          "number": 2,
+          "title": "NOEASY",
+          "duration": "3:17",
+          "type": "Lead Track"
+        },
+        {
+          "number": 3,
+          "title": "Thunderous",
+          "duration": "3:16",
+          "type": "B-Side"
+        },
+        {
+          "number": 4,
+          "title": "S-Class",
+          "duration": "3:51",
+          "type": "Vocal"
+        },
+        {
+          "number": 5,
+          "title": "Surfin'",
+          "duration": "3:43",
+          "type": "B-Side"
+        },
+        {
+          "number": 6,
+          "title": "한 잔의 추억 (A Moment)",
+          "duration": "4:02",
+          "type": "Ballad"
+        },
+        {
+          "number": 7,
+          "title": "Cheese",
+          "duration": "3:28",
+          "type": "Vocal"
+        },
+        {
+          "number": 8,
+          "title": "소확행 (S.E.O)",
+          "duration": "3:15",
+          "type": "Instrumental"
+        }
+      ],
+      "stats": {
+        "totalDuration": "28 minutos",
+        "tracksCount": 8,
+        "popularity": 85
+      }
+    },
+    {
+      "id": 2,
+      "title": "ODDINARY",
+      "releaseDate": "2022-03-18",
+      "type": "Mini Album",
+      "color": "#9D4EDD",
+      "description": "Segundo mini álbum que representa una evolución artística significativa con conceptos únicos.",
+      "tracks": [
+        {
+          "number": 1,
+          "title": "The View",
+          "duration": "2:37",
+          "type": "Intro"
+        },
+        {
+          "number": 2,
+          "title": "MANIAC",
+          "duration": "3:27",
+          "type": "Lead Track"
+        },
+        {
+          "number": 3,
+          "title": "Charmer",
+          "duration": "3:15",
+          "type": "B-Side"
+        },
+        {
+          "number": 4,
+          "title": "What If You Left Me Tomorrow",
+          "duration": "4:03",
+          "type": "Vocal"
+        },
+        {
+          "number": 5,
+          "title": "Deep End",
+          "duration": "3:38",
+          "type": "B-Side"
+        },
+        {
+          "number": 6,
+          "title": "피어나 (PHOBIA)",
+          "duration": "3:45",
+          "type": "Ballad"
+        },
+        {
+          "number": 7,
+          "title": "또 다른 봄날",
+          "duration": "3:32",
+          "type": "Vocal"
+        },
+        {
+          "number": 8,
+          "title": "Waiting for us",
+          "duration": "3:22",
+          "type": "Instrumental"
+        },
+        {
+          "number": 9,
+          "title": "안 보고 싶어도 자꾸 생각나",
+          "duration": "3:08",
+          "type": "Bonus Track"
+        }
+      ],
+      "stats": {
+        "totalDuration": "31 minutos",
+        "tracksCount": 9,
+        "popularity": 92
+      }
+    },
+    {
+      "id": 3,
+      "title": "ROCK-STAR",
+      "releaseDate": "2022-06-18",
+      "type": "Mini Album",
+      "color": "#FF0000",
+      "description": "Tercer mini álbum que introduce elementos de rock moderno en la propuesta musical del grupo.",
+      "stats": {
+        "totalDuration": "25 minutos",
+        "tracksCount": 7,
+        "popularity": 78
+      }
+    },
+    {
+      "id": 4,
+      "title": "ATE",
+      "releaseDate": "2022-09-23",
+      "type": "Mini Album",
+      "color": "#0077B6",
+      "description": "Cuarto mini álbum que representa la madurez artística del grupo con conceptos sofisticados.",
+      "stats": {
+        "totalDuration": "26 minutos",
+        "tracksCount": 7,
+        "popularity": 88
+      }
+    },
+    {
+      "id": 5,
+      "title": "MAXIDENT",
+      "releaseDate": "2022-11-04",
+      "type": "Mini Album",
+      "color": "#FF69B4",
+      "description": "Quinto mini álbum que marca una nueva identidad visual y musical con conceptos innovadores.",
+      "stats": {
+        "totalDuration": "29 minutos",
+        "tracksCount": 8,
+        "popularity": 95
+      }
+    }
+  ],
+  "members": [
+    {
+      "name": "Bang Chan",
+      "position": "Líder",
+      "birthday": "1997-10-03",
+      "nationality": "Australiano",
+      "role": "Leader, Vocal",
+      "image": "bangchan.jpg"
+    },
+    {
+      "name": "Lee Know",
+      "position": "Vocalista",
+      "birthday": "1998-10-25",
+      "nationality": "Coreano",
+      "role": "Vocal, Dancer",
+      "image": "leeknow.jpg"
+    },
+    {
+      "name": "Changbin",
+      "position": "Productor/Rapper",
+      "birthday": "1999-08-22",
+      "nationality": "Coreano",
+      "role": "Rap, Vocal, Producer",
+      "image": "changbin.jpg"
+    },
+    {
+      "name": "Hyunjin",
+      "position": "Bailarín/Vocalista",
+      "birthday": "2000-03-20",
+      "nationality": "Coreano",
+      "role": "Dancer, Vocal",
+      "image": "hyunjin.jpg"
+    },
+    {
+      "name": "Han",
+      "position": "Productor/Vocalista",
+      "birthday": "2000-09-14",
+      "nationality": "Coreano",
+      "role": "Vocal, Rap, Producer",
+      "image": "han.jpg"
+    },
+    {
+      "name": "Felix",
+      "position": "Rapero/Bailarín",
+      "birthday": "2000-09-15",
+      "nationality": "Australiano",
+      "role": "Rap, Dancer, Vocal",
+      "image": "felix.jpg"
+    },
+    {
+      "name": "Seungmin",
+      "position": "Vocalista Principal",
+      "birthday": "2000-09-22",
+      "nationality": "Coreano",
+      "role": "Vocal",
+      "image": "seungmin.jpg"
+    },
+    {
+      "name": "I.N",
+      "position": "Vocalista",
+      "birthday": "2001-02-08",
+      "nationality": "Coreano",
+      "role": "Vocal, Sub Rap",
+      "image": "in.jpg"
+    }
+  ],
+  "statistics": {
+    "debutDate": "2018-03-25",
+    "agencyName": "JYP Entertainment",
+    "memberCount": 8,
+    "countries": 190,
+    "totalSongs": 50,
+    "totalAlbums": 5,
+    "totalVideos": 100
+  }
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stray Kids - Discografía Oficial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-play"></i>
+                <span>STRAY KIDS</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="#albums">Álbumes</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>STRAY KIDS</h1>
+            <p>S-Class Boy Group from JYP Entertainment</p>
+            <button class="btn-primary" onclick="document.getElementById('albums').scrollIntoView()">
+                <span>Explorar Discografía</span>
+            </button>
+        </div>
+        <div class="hero-glow"></div>
+    </header>
+
+    <!-- Albums Section -->
+    <section id="albums" class="albums-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Álbumes</h2>
+            <div class="albums-grid" id="albumsGrid">
+                <!-- Cargado dinámicamente por app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Album -->
+    <section class="featured-album">
+        <div class="container">
+            <div class="featured-content">
+                <div class="featured-image">
+                    <img src="assets/images/maxident.jpg" alt="MAXIDENT" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23000%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22%23f00%22%3EMAXIDENT%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="featured-info">
+                    <h3>MAXIDENT</h3>
+                    <p class="release-date">Lanzamiento: Noviembre 2022</p>
+                    <p class="description">El quinto mini álbum de Stray Kids, marcando su evolución artística con conceptos visuales impactantes y sonidos innovadores.</p>
+                    <a href="pages/maxident.html" class="btn-secondary">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title">Por Los Números</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-compact-disc"></i>
+                    <h3 id="albumCount">5+</h3>
+                    <p>Álbumes Lanzados</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>190+</h3>
+                    <p>Países</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3>8</h3>
+                    <p>Miembros</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <h3>JYPE</h3>
+                    <p>Agencia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section class="members-section">
+        <div class="container">
+            <h2 class="section-title">Los 8 Miembros</h2>
+            <div class="members-grid">
+                <div class="member-card">
+                    <div class="member-img" style="background: linear-gradient(135deg, #ff0000, #000);"></div>
+                    <h3>Bang Chan</h3>
+                    <p>Líder</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-img" style="background: linear-gradient(135deg, #ff6b00, #000);"></div>
+                    <h3>Lee Know</h3>
+                    <p>Vocalista</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-img" style="background: linear-gradient(135deg, #ffb700, #000);"></div>
+                    <h3>Changbin</h3>
+                    <p>Productor/Rapper</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-img" style="background: linear-gradient(135deg, #00ff00, #000);"></div>
+                    <h3>Hyunjin</h3>
+                    <p>Bailarín/Vocalista</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-img" style="background: linear-gradient(135deg, #00ffff, #000);"></div>
+                    <h3>Han</h3>
+                    <p>Productor/Vocalist</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-img" style="background: linear-gradient(135deg, #0055ff, #000);"></div>
+                    <h3>Felix</h3>
+                    <p>Rapero/Bailarín</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-img" style="background: linear-gradient(135deg, #aa00ff, #000);"></div>
+                    <h3>Seungmin</h3>
+                    <p>Vocalista Principal</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-img" style="background: linear-gradient(135deg, #ff00ff, #000);"></div>
+                    <h3>I.N</h3>
+                    <p>Vocalista</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>STRAY KIDS</h4>
+                    <p>Fanpage Oficial - Todos los derechos reservados a JYP Entertainment</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="https://www.jype.com/">JYPE Oficial</a></li>
+                        <li><a href="https://www.youtube.com/@Stray_Kids">YouTube</a></li>
+                        <li><a href="https://www.instagram.com/stray_kids">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociales</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="footer-bottom">&copy; 2024 Stray Kids Fanpage. Hecho con ❤️</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
