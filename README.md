@@ -108,6 +108,22 @@ Pega ahi el link completo de YouTube:
 
 Tambien acepta links cortos como `https://youtu.be/VIDEO_ID`, links `/embed/VIDEO_ID` o directamente el ID del video.
 
+### Miniaturas de YouTube en canciones
+
+Tambien puedes poner una miniatura ajustada dentro de cada cancion agregando `data-youtube-url` al bloque `.track-item`:
+
+```html
+<div class="track-item" data-youtube-url="https://www.youtube.com/watch?v=VIDEO_ID">
+    <span class="track-number">02</span>
+    <div class="track-info">
+        <h4>Thunderous</h4>
+        <p>Title Track</p>
+    </div>
+</div>
+```
+
+El sitio genera automaticamente la imagen desde YouTube (`img.youtube.com`) y al hacer clic abre el video en una nueva pestana.
+
 ## 🎨 Paleta de Colores
 
 | Color | Uso | Código |
@@ -204,3 +220,22 @@ Para reportar bugs o sugerir mejoras, abre un issue en GitHub.
 **Hecho con ❤️ por STAYs**
 
 *"S-Class, 특별하고 특별한 Stray Kids"*
+## Reproductor de audio local o cloud
+
+Para reproducir una cancion desde un MP3 local o una URL de Cloudinary, Firebase, Vercel, etc., agrega `data-audio-url` al bloque `.track-item`:
+
+```html
+<div class="track-item" data-audio-url="https://res.cloudinary.com/tu-cuenta/video/upload/cancion.mp3">
+    <span class="track-number">02</span>
+    <div class="track-info">
+        <h4>Thunderous</h4>
+        <p>Title Track</p>
+    </div>
+</div>
+```
+
+Tambien puedes usar una ruta local si guardas el archivo dentro del proyecto:
+
+```html
+<div class="track-item" data-audio-url="../assets/audio/thunderous.mp3">
+```
