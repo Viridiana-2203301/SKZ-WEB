@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     setupNavigation();
+    setupAlbumVideos();
     enhanceTrackList();
 });
 
@@ -21,6 +22,82 @@ function setupNavigation() {
             });
         });
     }
+}
+
+// Preparar videos de YouTube para cada album
+function setupAlbumVideos() {
+    const videoBlocks = document.querySelectorAll('[data-youtube-url]');
+
+    videoBlocks.forEach(block => {
+        const url = block.dataset.youtubeUrl.trim();
+        const player = block.querySelector('.album-video-player');
+        const copy = block.querySelector('.album-video-copy');
+
+        if (!url || !player) {
+            return;
+        }
+
+        const videoId = getYouTubeVideoId(url);
+
+        if (!videoId) {
+            player.classList.add('has-video-error');
+            return;
+        }
+
+        const watchUrl = `https://www.youtube.com/watch?v=${videoId}`;
+        const embedParams = new URLSearchParams({
+            rel: '0',
+            modestbranding: '1',
+            playsinline: '1'
+        });
+
+        if (window.location.origin.startsWith('http')) {
+            embedParams.set('origin', window.location.origin);
+        }
+
+        player.innerHTML = `
+            <iframe
+                src="https://www.youtube.com/embed/${videoId}?${embedParams.toString()}"
+                title="Video de YouTube del album"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        `;
+
+        if (copy && !copy.querySelector('.album-video-link')) {
+            copy.insertAdjacentHTML('beforeend', `
+                <a class="album-video-link" href="${watchUrl}" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i>
+                    Ver en YouTube
+                </a>
+            `);
+        }
+    });
+}
+
+function getYouTubeVideoId(url) {
+    try {
+        const parsedUrl = new URL(url);
+
+        if (parsedUrl.hostname.includes('youtu.be')) {
+            return cleanYouTubeVideoId(parsedUrl.pathname.split('/').filter(Boolean)[0] || '');
+        }
+
+        if (parsedUrl.searchParams.has('v')) {
+            return cleanYouTubeVideoId(parsedUrl.searchParams.get('v'));
+        }
+
+        const embedMatch = parsedUrl.pathname.match(/\/(?:embed|shorts)\/([^/?&#]+)/);
+        return embedMatch ? cleanYouTubeVideoId(embedMatch[1]) : '';
+    } catch (error) {
+        return cleanYouTubeVideoId(url);
+    }
+}
+
+function cleanYouTubeVideoId(videoId) {
+    const cleanedId = videoId.split(/[?&#]/)[0].trim();
+    return /^[a-zA-Z0-9_-]{11}$/.test(cleanedId) ? cleanedId : '';
 }
 
 // Mejorar lista de canciones
@@ -72,6 +149,7 @@ window.addEventListener('load', () => {
 
 // Exportar para uso global
 window.albumsApp = {
+    setupAlbumVideos,
     enhanceTrackList,
     animateReviews,
     setupRelatedAlbums
