@@ -92,6 +92,22 @@ Con tu clave real.
 
 `js/config.js` esta ignorado por Git para evitar subir claves privadas al repositorio.
 
+### Videos en paginas de album
+
+Cada pagina dentro de `pages/` tiene una seccion lista para mostrar un video antes de la lista de canciones:
+
+```html
+<section class="album-video-section" data-youtube-url="">
+```
+
+Pega ahi el link completo de YouTube:
+
+```html
+<section class="album-video-section" data-youtube-url="https://www.youtube.com/watch?v=VIDEO_ID">
+```
+
+Tambien acepta links cortos como `https://youtu.be/VIDEO_ID`, links `/embed/VIDEO_ID` o directamente el ID del video.
+
 ## 🎨 Paleta de Colores
 
 | Color | Uso | Código |

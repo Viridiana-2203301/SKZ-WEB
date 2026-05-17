@@ -108,6 +108,113 @@
     border-top: 2px solid rgba(var(--primary-rgb, 255, 0, 0), );
 }
 
+/* ==================== ALBUM VIDEO SECTION ==================== */
+.album-video-section {
+    padding: 4rem 0;
+    background: #000000;
+}
+
+.album-video-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.8fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.album-video-player {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    border: 2px solid rgba(var(--primary-rgb, 255, 0, 0), 0.35);
+    background: linear-gradient(135deg, #111111, #202020);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
+
+.album-video-player iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.album-video-placeholder {
+    height: 100%;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.78);
+    text-align: center;
+}
+
+.album-video-placeholder i {
+    width: 72px;
+    height: 72px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ffffff;
+    background: var(--primary-color);
+    font-size: 1.7rem;
+    box-shadow: 0 0 26px rgba(var(--primary-rgb, 255, 0, 0), 0.45);
+}
+
+.album-video-placeholder span {
+    max-width: 420px;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.album-video-copy {
+    padding: 1rem 0;
+}
+
+.album-video-copy h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(var(--primary-rgb, 255, 0, 0), );
+}
+
+.album-video-copy p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.album-video-link {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-top: 1.5rem;
+    padding: 0.85rem 1.15rem;
+    border-radius: 8px;
+    color: #ffffff;
+    background: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    box-shadow: 0 0 22px rgba(var(--primary-rgb, 255, 0, 0), 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.album-video-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 34px rgba(var(--primary-rgb, 255, 0, 0), 0.5);
+}
+
+.album-video-link i {
+    font-size: 1.15rem;
+}
+
 /* ==================== TRACKLIST SECTION ==================== */
 .tracklist-section {
     padding: 4rem 0;
@@ -325,6 +432,10 @@
     .album-details h2 {
         font-size: 2rem;
     }
+
+    .album-video-layout {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -334,6 +445,18 @@
 
     .album-info-section {
         padding: 2rem 0;
+    }
+
+    .album-video-section {
+        padding: 2.5rem 0;
+    }
+
+    .album-video-copy {
+        order: -1;
+    }
+
+    .album-video-copy h2 {
+        font-size: 1.5rem;
     }
 
     .album-cover {
