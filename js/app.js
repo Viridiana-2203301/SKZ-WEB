@@ -91,7 +91,7 @@ const albums = [
         color: "#0055ff",
         description: "Segundo álbum de estudio y primer millón-seller de Stray Kids y de JYP Entertainment. Con \"Thunderous\" como tema principal, obtuvo 6 victorias en programas musicales. Su concepto gira en torno a cazadores de monstruos que luchan con el ruido.",
         link: "pages/noeasy.html",
-        imageUrl: "https://res.cloudinary.com/dhbsp8htx/image/upload/v1778908871/noisy_dny1d1.jpg"
+        imageUrl: "https://res.cloudinary.com/dhbsp8htx/image/upload/v1779002861/nnnn_vwxsye.jpg"
     },
     {
         id: 11,
@@ -171,6 +171,7 @@ const albums = [
 document.addEventListener('DOMContentLoaded', () => {
     loadAlbums();
     setupNavigation();
+    setupHeroEffects();
 });
 
 // Cargar álbumes en la grid
@@ -268,9 +269,32 @@ function smoothScroll(target) {
     }
 }
 
+// Configurar efectos de zoom y variables de CSS para el banner principal (Hero)
+function setupHeroEffects() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+
+    // Obtener la imagen de fondo inline y la posición
+    const bgImage = hero.style.backgroundImage;
+    const bgPosition = hero.style.backgroundPosition || 'center center';
+
+    if (bgImage) {
+        // Extraer únicamente la URL de la imagen, eliminando el degradado oscuro inline del HTML
+        const urlMatch = bgImage.match(/url\(['"]?([^'"]+)['"]?\)/i);
+        const imageUrl = urlMatch ? urlMatch[0] : bgImage;
+
+        // Guardar en variables de CSS para que las use el pseudo-elemento ::before
+        hero.style.setProperty('--hero-bg-url', imageUrl);
+        hero.style.setProperty('--hero-bg-pos', bgPosition);
+        // Limpiar la imagen del contenedor principal para evitar duplicación
+        hero.style.backgroundImage = 'none';
+    }
+}
+
 // Exportar para uso en otros archivos
 window.strayKidsApp = {
     albums,
     fetchYouTubeVideos,
-    smoothScroll
+    smoothScroll,
+    setupHeroEffects
 };
