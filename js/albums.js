@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupTrackThumbnails();
     setupTrackAudioPlayers();
     enhanceTrackList();
+    setupAlbumHeroEffects();
 });
 
 // Setup de navegación
@@ -327,6 +328,28 @@ function setupRelatedAlbums() {
     });
 }
 
+// Configurar efectos de zoom y variables de CSS para el banner (Hero)
+function setupAlbumHeroEffects() {
+    const hero = document.querySelector('.album-hero');
+    if (!hero) return;
+
+    // Obtener la imagen de fondo inline y la posición
+    const bgImage = hero.style.backgroundImage;
+    const bgPosition = hero.style.backgroundPosition || 'center center';
+
+    if (bgImage) {
+        // Extraer únicamente la URL de la imagen, eliminando el degradado oscuro inline del HTML
+        const urlMatch = bgImage.match(/url\(['"]?([^'"]+)['"]?\)/i);
+        const imageUrl = urlMatch ? urlMatch[0] : bgImage;
+
+        // Guardar en variables de CSS para que las use el pseudo-elemento ::before
+        hero.style.setProperty('--hero-bg-url', imageUrl);
+        hero.style.setProperty('--hero-bg-pos', bgPosition);
+        // Limpiar la imagen del contenedor principal para evitar duplicación
+        hero.style.backgroundImage = 'none';
+    }
+}
+
 // Ejecutar cuando el DOM esté listo
 window.addEventListener('load', () => {
     animateReviews();
@@ -340,5 +363,6 @@ window.albumsApp = {
     setupTrackAudioPlayers,
     enhanceTrackList,
     animateReviews,
-    setupRelatedAlbums
+    setupRelatedAlbums,
+    setupAlbumHeroEffects
 };
