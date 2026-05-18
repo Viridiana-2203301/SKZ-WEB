@@ -298,3 +298,25 @@ window.strayKidsApp = {
     smoothScroll,
     setupHeroEffects
 };
+
+// Cargar dinámicamente el reproductor de audio flotante y su cola de reproducción
+(function() {
+    const isSubPage = window.location.pathname.includes('/pages/');
+    const basePath = isSubPage ? '../' : '';
+    
+    // Evitar duplicaciones
+    if (window.skzPlayerBarLoaded) return;
+    window.skzPlayerBarLoaded = true;
+
+    // Inyectar CSS de la barra
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${basePath}css/player-bar.css`;
+    document.head.appendChild(link);
+
+    // Cargar script de la barra
+    const script = document.createElement('script');
+    script.src = `${basePath}js/player-bar.js`;
+    script.defer = true;
+    document.body.appendChild(script);
+})();

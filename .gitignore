@@ -1,2 +1,34 @@
 js/config.js
 
+# ── Credenciales de usuarios (contiene contraseñas) ──
+backend/users.csv
+
+# ── Base de datos Django (datos locales) ──
+backend/db.sqlite3
+
+# ── Archivos de Python ──
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ── Entornos virtuales ──
+venv/
+env/
+.venv/
+.env/
+
+# ── Variables de entorno ──
+.env
+.env.local
+
+# ── Django ──
+backend/staticfiles/
+backend/mediafiles/
+*.log
+
+# ── Sistema operativo ──
+.DS_Store
+Thumbs.db
+desktop.ini

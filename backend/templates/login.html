@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión — Stray Kids</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #080808;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Fondo animado */
+        .bg {
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 15% 25%, rgba(200, 30, 30, 0.2) 0%, transparent 55%),
+                radial-gradient(ellipse at 85% 75%, rgba(200, 30, 30, 0.12) 0%, transparent 55%),
+                #080808;
+            z-index: 0;
+        }
+
+        /* Partículas decorativas */
+        .particle {
+            position: fixed;
+            border-radius: 50%;
+            background: rgba(200, 30, 30, 0.15);
+            animation: float linear infinite;
+            z-index: 0;
+        }
+        @keyframes float {
+            from { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+            10%  { opacity: 1; }
+            90%  { opacity: 1; }
+            to   { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Card */
+        .card {
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 420px;
+            background: rgba(14, 14, 14, 0.9);
+            backdrop-filter: blur(30px) saturate(160%);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-top: 3px solid #cc1111;
+            border-radius: 22px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 35px 90px rgba(0,0,0,0.85), 0 0 50px rgba(200,30,30,0.07);
+            animation: appear 0.55s cubic-bezier(0.19,1,0.22,1);
+        }
+        @keyframes appear {
+            from { opacity: 0; transform: scale(0.88) translateY(35px); }
+            to   { opacity: 1; transform: scale(1)    translateY(0); }
+        }
+
+        /* Logo */
+        .logo-wrap {
+            text-align: center;
+            margin-bottom: 1.6rem;
+        }
+        .logo-circle {
+            width: 70px; height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #cc1111, #ff4444);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 0 35px rgba(200,30,30,0.5);
+            animation: pulse 2s ease-in-out infinite;
+            margin-bottom: 1rem;
+        }
+        @keyframes pulse {
+            0%,100% { box-shadow: 0 0 35px rgba(200,30,30,0.5); }
+            50%      { box-shadow: 0 0 55px rgba(200,30,30,0.8); }
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 6px;
+            text-shadow: 0 0 25px rgba(200,30,30,0.4);
+            margin-bottom: 4px;
+        }
+        .subtitle {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.35);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+        .desc {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.42);
+            margin-bottom: 2rem;
+        }
+
+        /* Campos */
+        .field {
+            position: relative;
+            margin-bottom: 1.1rem;
+        }
+        .field i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255,255,255,0.28);
+            font-size: 0.88rem;
+            pointer-events: none;
+            transition: color 0.2s;
+        }
+        .field:focus-within i { color: #cc1111; }
+        .field input {
+            width: 100%;
+            padding: 14px 14px 14px 44px;
+            background: rgba(255,255,255,0.045);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 11px;
+            color: #fff;
+            font-size: 0.97rem;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            font-family: inherit;
+        }
+        .field input::placeholder { color: rgba(255,255,255,0.22); }
+        .field input:focus {
+            border-color: #cc1111;
+            box-shadow: 0 0 0 3px rgba(200,30,30,0.15);
+        }
+
+        /* Error */
+        .error-box {
+            background: rgba(255,50,50,0.09);
+            border-left: 3px solid #ff4444;
+            border-radius: 7px;
+            color: #ff6666;
+            font-size: 0.83rem;
+            padding: 9px 13px;
+            margin-bottom: 1rem;
+            display: none;
+            align-items: center;
+            gap: 8px;
+        }
+        .error-box.visible { display: flex; }
+
+        /* Botón */
+        .btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 11px;
+            background: linear-gradient(135deg, #cc1111, #ff3333);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 800;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.25s;
+            box-shadow: 0 6px 28px rgba(200,30,30,0.4);
+            margin-top: 0.4rem;
+            letter-spacing: 0.5px;
+        }
+        .btn:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(200,30,30,0.55);
+        }
+        .btn:disabled { opacity: 0.6; cursor: wait; transform: none; }
+
+        /* Animación de error en el card */
+        .card.shake { animation: shake 0.5s ease; }
+        @keyframes shake {
+            0%,100% { transform: translateX(0); }
+            20%     { transform: translateX(-12px); }
+            40%     { transform: translateX(12px); }
+            60%     { transform: translateX(-8px); }
+            80%     { transform: translateX(8px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg"></div>
+
+    <!-- Partículas flotantes -->
+    <script>
+        for (let i = 0; i < 8; i++) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            const size = Math.random() * 60 + 20;
+            p.style.cssText = `
+                width:${size}px; height:${size}px;
+                left:${Math.random()*100}%;
+                animation-duration:${Math.random()*20+15}s;
+                animation-delay:-${Math.random()*20}s;
+            `;
+            document.body.appendChild(p);
+        }
+    </script>
+
+    <div class="card" id="loginCard">
+        <div class="logo-wrap">
+            <div class="logo-circle"><i class="fas fa-play"></i></div>
+            <h1>STRAY KIDS</h1>
+            <p class="subtitle">Discografía Oficial</p>
+            <p class="desc">Ingresa tus credenciales para acceder</p>
+        </div>
+
+        <div class="error-box" id="errorBox">
+            <i class="fas fa-exclamation-circle"></i>
+            <span id="errorMsg">Usuario o contraseña incorrectos.</span>
+        </div>
+
+        <form id="loginForm" autocomplete="on">
+            <div class="field">
+                <i class="fas fa-user"></i>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Usuario"
+                    autocomplete="username"
+                    required
+                    autofocus
+                >
+            </div>
+            <div class="field">
+                <i class="fas fa-lock"></i>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Contraseña"
+                    autocomplete="current-password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="btn" id="submitBtn">
+                <span>Entrar</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </form>
+    </div>
+
+    <script>
+        // Obtener el destino después del login (?next=...)
+        const params = new URLSearchParams(window.location.search);
+        const nextUrl = params.get('next') || '/';
+
+        // Obtener CSRF primero, luego habilitar el formulario
+        async function getCSRF() {
+            try {
+                await fetch('/api/csrf/', { credentials: 'include' });
+            } catch(e) {}
+        }
+
+        function getCookie(name) {
+            const val = `; ${document.cookie}`;
+            const parts = val.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+            return null;
+        }
+
+        function showError(msg) {
+            document.getElementById('errorMsg').textContent = msg;
+            document.getElementById('errorBox').classList.add('visible');
+            const card = document.getElementById('loginCard');
+            card.classList.remove('shake');
+            void card.offsetWidth; // trigger reflow
+            card.classList.add('shake');
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn      = document.getElementById('submitBtn');
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+
+            document.getElementById('errorBox').classList.remove('visible');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verificando...';
+
+            try {
+                const res = await fetch('/api/login/', {
+                    method:      'POST',
+                    credentials: 'include',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken':  getCookie('csrftoken') || '',
+                    },
+                    body: JSON.stringify({ username, password }),
+                });
+
+                if (res.ok) {
+                    // Redirigir al destino
+                    btn.innerHTML = '<i class="fas fa-check"></i> Accediendo...';
+                    window.location.href = nextUrl;
+                } else {
+                    const data = await res.json();
+                    showError(data.error || 'Usuario o contraseña incorrectos.');
+                }
+            } catch(err) {
+                showError('No se pudo conectar con el servidor.');
+            }
+
+            if (btn.textContent !== 'Accediendo...') {
+                btn.disabled = false;
+                btn.innerHTML = '<span>Entrar</span><i class="fas fa-arrow-right"></i>';
+            }
+        });
+
+        // Inicializar: obtener CSRF
+        getCSRF();
+    </script>
+</body>
+</html>
