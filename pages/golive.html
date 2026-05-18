@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -20,6 +20,7 @@
             background: #000000;
         }
     </style>
+    <link rel="stylesheet" href="../css/auth-comments.css">
 </head>
 
 <body>
@@ -242,6 +243,18 @@
     </section>
 
     <!-- Footer -->
+    <!-- ====== SECCIÓN DE COMENTARIOS ====== -->
+    <section class="skz-comments-section" id="skz-comments-section" data-album-slug="golive">
+        <div class="container">
+            <div class="skz-comments-header">
+                <h2><i class="fas fa-comments"></i> Comentarios</h2>
+                <span class="skz-comments-count" id="skz-comments-count"></span>
+            </div>
+            <div id="skz-comment-form-container"></div>
+            <div id="skz-comments-list"></div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -280,5 +293,7 @@
     <script src="../js/config.js"></script>
     <script src="../js/app.js"></script>
     <script src="../js/albums.js"></script>
-</body>
+    <script src="../js/auth.js"></script>
+    <script src="../js/comments.js"></script></body>
 </html>
+
