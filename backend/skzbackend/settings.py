@@ -93,7 +93,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # Sirve los archivos estáticos del frontend (css/, js/, images/, etc.)
-STATICFILES_DIRS = [FRONTEND_DIR]
+STATICFILES_DIRS = [
+    ('css', FRONTEND_DIR / 'css'),
+    ('js', FRONTEND_DIR / 'js'),
+    ('data', FRONTEND_DIR / 'data'),
+    ('pages', FRONTEND_DIR / 'pages'),
+]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

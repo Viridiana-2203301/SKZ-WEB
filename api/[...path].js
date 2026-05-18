@@ -8,7 +8,10 @@ module.exports = async function handler(request, response) {
 
   const targetBase = backendUrl.replace(/\/$/, '');
   const originalUrl = new URL(request.url, `https://${request.headers.host}`);
-  const targetUrl = new URL(`${targetBase}${originalUrl.pathname}${originalUrl.search}`);
+  const backendPath = originalUrl.pathname.endsWith('/')
+    ? originalUrl.pathname
+    : `${originalUrl.pathname}/`;
+  const targetUrl = new URL(`${targetBase}${backendPath}${originalUrl.search}`);
   const headers = new Headers();
 
   for (const [key, value] of Object.entries(request.headers)) {
