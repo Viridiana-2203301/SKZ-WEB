@@ -148,8 +148,10 @@ const Auth = (() => {
 
         currentUser = null;
         clearTabAuthenticated();
-        // Volver a mostrar la pantalla de bloqueo
-        showLockScreen();
+        
+        // Redirigir al inicio (index.html) para que la sesión comience desde cero
+        const isSubPage = window.location.pathname.includes('/pages/');
+        window.location.href = isSubPage ? '../index.html' : 'index.html';
     }
 
     // ── Actualizar navbar ────────────────────────────────────────────────

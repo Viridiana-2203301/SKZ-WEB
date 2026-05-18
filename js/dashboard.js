@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadTimeline();
     loadMembersStats();
     loadRecentActivity();
-    setupNavigation();
 });
 
 // Inicializar clases especiales para las tarjetas de resumen
@@ -440,22 +439,3 @@ function formatDate(dateString) {
     });
 }
 
-// Setup del menú hamburguesa responsivo
-function setupNavigation() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                hamburger.classList.remove('active');
-            });
-        });
-    }
-}
