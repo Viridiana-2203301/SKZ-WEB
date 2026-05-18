@@ -96,13 +96,26 @@ body {
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
+    z-index: 1001; /* Ensure hamburger is above the menu if needed */
 }
 
 .hamburger span {
     width: 25px;
     height: 3px;
     background: var(--primary-color);
-    transition: var(--transition);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    border-radius: 3px;
+}
+
+/* Animación del menú hamburguesa */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* ==================== HERO SECTION ==================== */
@@ -615,6 +628,17 @@ body {
     }
 }
 
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes pulse {
     0%, 100% {
         transform: scale(1);
@@ -629,21 +653,42 @@ body {
     .nav-menu {
         display: none;
         position: absolute;
-        top: 70px;
+        top: 100%; /* Abrir justo debajo de la navbar */
         left: 0;
         width: 100%;
         background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
         flex-direction: column;
         gap: 0;
+        border-bottom: 2px solid var(--primary-color);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     }
 
     .nav-menu.active {
         display: flex;
+        animation: fadeInDown 0.3s ease;
     }
 
     .nav-menu a {
-        padding: 1rem;
-        border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+        display: block;
+        padding: 1.5rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 0, 0, 0.15);
+        font-size: 1.1rem;
+    }
+
+    .nav-menu a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu a::after {
+        display: none; /* Desactivar la línea inferior de animación hover en móvil */
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+        background: rgba(255, 0, 0, 0.1);
+        color: var(--primary-color);
     }
 
     .hamburger {

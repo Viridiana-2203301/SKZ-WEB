@@ -216,12 +216,14 @@ function setupNavigation() {
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
         });
 
         // Cerrar menú al hacer clic en un enlace
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
             });
         });
 

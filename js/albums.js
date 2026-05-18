@@ -1,7 +1,6 @@
 // albums.js - Lógica para páginas de álbumes
 
 document.addEventListener('DOMContentLoaded', () => {
-    setupNavigation();
     setupAlbumVideos();
     setupTrackThumbnails();
     setupTrackAudioPlayers();
@@ -9,23 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupAlbumHeroEffects();
 });
 
-// Setup de navegación
-function setupNavigation() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
 
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-    }
-}
 
 // Preparar videos de YouTube para cada album
 function setupAlbumVideos() {
