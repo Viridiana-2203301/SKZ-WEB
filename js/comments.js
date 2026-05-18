@@ -76,7 +76,7 @@ const Comments = (() => {
         }
 
         list.innerHTML = comments.map(c => {
-            const isOwn   = currentUser && currentUser.id === c.user_id;
+            const isOwn   = currentUser?.username === c.username;
             const initial = c.username.charAt(0).toUpperCase();
             const date    = formatDate(c.created_at);
 
@@ -219,6 +219,10 @@ const Comments = (() => {
                     card.style.animation = 'fadeOut 0.3s ease forwards';
                     setTimeout(() => { card.remove(); loadComments(); }, 300);
                 }
+            } else {
+                const data = await readJsonResponse(res);
+                await loadComments();
+                alert(data.error || 'No se pudo eliminar el comentario.');
             }
         } catch (err) {
             alert('Error al eliminar el comentario.');
@@ -234,6 +238,17 @@ const Comments = (() => {
     function formatDate(isoStr) {
         const d = new Date(isoStr);
         return d.toLocaleDateString('es-MX', { day:'2-digit', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit' });
+    }
+
+    async function readJsonResponse(response) {
+        const text = await response.text();
+        if (!text) return {};
+
+        try {
+            return JSON.parse(text);
+        } catch (error) {
+            return {};
+        }
     }
 
     return { init };
