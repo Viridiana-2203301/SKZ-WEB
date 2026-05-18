@@ -133,11 +133,19 @@ const Auth = (() => {
 
     // ── Logout ───────────────────────────────────────────────────────────
     async function logoutUser() {
-        await fetch(`${SKZ_API}/logout/`, {
-            method:      'POST',
-            credentials: 'include',
-            headers:     { 'X-CSRFToken': csrfToken || getCookie('csrftoken') },
-        });
+        try {
+            await fetch(`${SKZ_API}/logout/`, {
+                method:      'POST',
+                credentials: 'include',
+                headers:     { 'X-CSRFToken': csrfToken || getCookie('csrftoken') },
+            });
+        } catch (e) {
+            console.error('Error logging out from server:', e);
+        }
+
+        // Disparar evento global de logout para limpiar player, cola y estados
+        document.dispatchEvent(new CustomEvent('skz:logout'));
+
         currentUser = null;
         clearTabAuthenticated();
         // Volver a mostrar la pantalla de bloqueo

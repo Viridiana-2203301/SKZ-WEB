@@ -194,6 +194,29 @@
                 queueDrawer.classList.remove('active');
             }
         });
+
+        // Pausar y resetear reproductor al cerrar sesión
+        document.addEventListener('skz:logout', () => {
+            if (activeAudio) {
+                try { activeAudio.pause(); } catch (err) {}
+            }
+            if (globalAudio) {
+                try { globalAudio.pause(); globalAudio.src = ''; } catch (err) {}
+            }
+            activeAudio = null;
+            queue = [];
+            currentIndex = -1;
+            isPlayingFromQueue = false;
+
+            if (playerBar) {
+                playerBar.classList.remove('active', 'is-playing');
+            }
+            if (queueDrawer) {
+                queueDrawer.classList.remove('active');
+            }
+            localStorage.removeItem('skz_player_state');
+            updateQueueUI();
+        });
     }
 
     // --- MANEJADORES DE AUDIO ---

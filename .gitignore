@@ -1,7 +1,6 @@
 js/config.js
 
-# ── Credenciales de usuarios (contiene contraseñas) ──
-backend/users.csv
+
 
 # ── Base de datos Django (datos locales) ──
 backend/db.sqlite3
