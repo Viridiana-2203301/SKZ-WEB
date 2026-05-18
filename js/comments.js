@@ -26,6 +26,7 @@ const Comments = (() => {
         document.addEventListener('skz:auth-ready', (e) => {
             currentUser = e.detail || window.SKZAuth?.getCurrentUser() || null;
             renderForm();
+            loadComments();
         });
 
         if (document.readyState === 'complete') {
@@ -35,8 +36,8 @@ const Comments = (() => {
         }
 
         // Escuchar eventos de login/logout
-        document.addEventListener('skz:login',  (e) => { currentUser = e.detail; renderForm(); });
-        document.addEventListener('skz:logout', ()  => { currentUser = null; renderForm(); });
+        document.addEventListener('skz:login',  (e) => { currentUser = e.detail; renderForm(); loadComments(); });
+        document.addEventListener('skz:logout', ()  => { currentUser = null; renderForm(); loadComments(); });
     }
 
     // --- CARGAR COMENTARIOS ---
@@ -54,7 +55,7 @@ const Comments = (() => {
             const comments = await res.json();
             renderComments(comments);
         } catch (e) {
-            list.innerHTML = `<div class="skz-comments-empty"><i class="fas fa-exclamation-circle"></i> No se pudo conectar con el servidor. Asegúrate de que el backend esté corriendo en <strong>localhost:8000</strong>.</div>`;
+            list.innerHTML = `<div class="skz-comments-empty"><i class="fas fa-exclamation-circle"></i> No se pudo conectar con el servidor.</div>`;
         }
     }
 
@@ -221,6 +222,12 @@ const Comments = (() => {
                 }
             } else {
                 const data = await readJsonResponse(res);
+                if (res.status === 401) {
+                    currentUser = null;
+                    window.SKZAuth?.clearTabAuthenticated?.();
+                    renderForm();
+                    window.SKZAuth?.showLockScreen();
+                }
                 await loadComments();
                 alert(data.error || 'No se pudo eliminar el comentario.');
             }

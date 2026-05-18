@@ -27,3 +27,10 @@ for (const entry of entries) {
 
   fs.cpSync(source, destination, { recursive: true });
 }
+
+const config = `window.SKZ_CONFIG = ${JSON.stringify({
+  youtubeApiKey: process.env.YOUTUBE_API_KEY || '',
+  apiBaseUrl: process.env.API_BASE_URL || 'auto',
+}, null, 2)};\n`;
+
+fs.writeFileSync(path.join(output, 'js', 'config.js'), config, 'utf8');

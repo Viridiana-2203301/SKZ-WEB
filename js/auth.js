@@ -4,7 +4,17 @@
    ========================================================================== */
 
 function resolveApiBaseUrl() {
-    const configuredUrl = window.SKZ_CONFIG?.apiBaseUrl || window.location.origin;
+    const configuredUrl = window.SKZ_CONFIG?.apiBaseUrl || 'auto';
+
+    if (configuredUrl === 'auto') {
+        const localHosts = ['localhost', '127.0.0.1'];
+
+        if (localHosts.includes(window.location.hostname) && window.location.port && window.location.port !== '8000') {
+            return `${window.location.protocol}//${window.location.hostname}:8000`;
+        }
+
+        return window.location.origin;
+    }
 
     try {
         const apiUrl = new URL(configuredUrl, window.location.origin);
@@ -304,10 +314,9 @@ const Auth = (() => {
             markTabAuthenticated(user);
             updateNavbar();
         } else {
-            // No autenticado: bloquear toda la página
-            currentUser = getCachedTabUser();
-            markTabAuthenticated();
-            updateNavbar();
+            currentUser = null;
+            clearTabAuthenticated();
+            showLockScreen();
         }
 
         notifyAuthReady();
