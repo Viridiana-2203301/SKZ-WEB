@@ -140,7 +140,7 @@ class CommentDeleteView(APIView):
         try:
             comment = Comment.objects.get(pk=pk)
         except Comment.DoesNotExist:
-            return Response({'error': 'No encontrado.'}, status=404)
+            return Response({'message': 'El comentario ya no existe.'}, status=200)
 
         if comment.csv_username != username:
             return Response({'error': 'No puedes borrar comentarios ajenos.'}, status=403)
