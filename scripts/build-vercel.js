@@ -7,6 +7,7 @@ const entries = [
   'index.html',
   'albums.html',
   'dashboard.html',
+  'favicon.ico',
   'css',
   'js',
   'data',
