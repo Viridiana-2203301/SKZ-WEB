@@ -23,6 +23,11 @@ const Comments = (() => {
             await loadComments();
         };
 
+        document.addEventListener('skz:auth-ready', (e) => {
+            currentUser = e.detail || window.SKZAuth?.getCurrentUser() || null;
+            renderForm();
+        });
+
         if (document.readyState === 'complete') {
             setTimeout(tryInit, 300); // auth.js puede estar inicializando
         } else {
@@ -138,7 +143,7 @@ const Comments = (() => {
                 </div>`;
 
             document.getElementById('skzCommentsLoginBtn')?.addEventListener('click', () => {
-                window.SKZAuth?.openModal('login');
+                window.SKZAuth?.showLockScreen();
             });
         }
     }
@@ -158,6 +163,16 @@ const Comments = (() => {
         if (errorEl) errorEl.textContent = '';
 
         try {
+            const activeUser = await window.SKZAuth?.refreshSession?.();
+            if (!activeUser) {
+                window.SKZAuth?.clearTabAuthenticated?.();
+                if (errorEl) errorEl.textContent = 'Tu sesion expiro. Inicia sesion nuevamente y vuelve a publicar.';
+                window.SKZAuth?.showLockScreen();
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-paper-plane"></i> Publicar';
+                return;
+            }
+
             const res = await fetch(`${window.SKZAuth.SKZ_API}/comments/`, {
                 method:      'POST',
                 credentials: 'include',
@@ -174,6 +189,10 @@ const Comments = (() => {
                 await loadComments();
             } else {
                 const data = await res.json();
+                if (res.status === 401) {
+                    window.SKZAuth?.clearTabAuthenticated?.();
+                    window.SKZAuth?.showLockScreen();
+                }
                 if (errorEl) errorEl.textContent = data.error || JSON.stringify(data);
             }
         } catch (err) {
