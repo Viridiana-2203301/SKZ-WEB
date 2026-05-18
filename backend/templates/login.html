@@ -310,6 +310,11 @@
 
                 if (res.ok) {
                     // Redirigir al destino
+                    sessionStorage.setItem('skz_tab_authenticated', 'true');
+                    sessionStorage.setItem('skz_tab_user', JSON.stringify({ username }));
+                    if (!window.name.includes('skz:authenticated')) {
+                        window.name = window.name ? `${window.name}|skz:authenticated` : 'skz:authenticated';
+                    }
                     btn.innerHTML = '<i class="fas fa-check"></i> Accediendo...';
                     window.location.href = nextUrl;
                 } else {

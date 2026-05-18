@@ -3,11 +3,33 @@
    Los usuarios se definen en backend/users.csv
    ========================================================================== */
 
-const SKZ_API = `${window.location.origin}/api`;
+function resolveApiBaseUrl() {
+    const configuredUrl = window.SKZ_CONFIG?.apiBaseUrl || window.location.origin;
+
+    try {
+        const apiUrl = new URL(configuredUrl, window.location.origin);
+        const localHosts = ['localhost', '127.0.0.1'];
+
+        if (localHosts.includes(apiUrl.hostname) && localHosts.includes(window.location.hostname)) {
+            apiUrl.hostname = window.location.hostname;
+        }
+
+        return apiUrl.origin;
+    } catch (error) {
+        return window.location.origin;
+    }
+}
+
+const SKZ_API_BASE = resolveApiBaseUrl();
+const SKZ_API = `${SKZ_API_BASE}/api`;
+const SKZ_TAB_AUTH_KEY = 'skz_tab_authenticated';
+const SKZ_TAB_AUTH_TOKEN = 'skz:authenticated';
+const SKZ_TAB_USER_KEY = 'skz_tab_user';
 
 const Auth = (() => {
     let currentUser = null;
     let csrfToken   = null;
+    let authReady   = false;
 
     // ── Obtener cookie CSRF ──────────────────────────────────────────────
     async function fetchCSRF() {
@@ -25,6 +47,38 @@ const Auth = (() => {
     }
 
     // ── Verificar sesión activa ──────────────────────────────────────────
+    function markTabAuthenticated(user = currentUser) {
+        sessionStorage.setItem(SKZ_TAB_AUTH_KEY, 'true');
+        if (user?.username) {
+            sessionStorage.setItem(SKZ_TAB_USER_KEY, JSON.stringify({ username: user.username }));
+        }
+        if (!window.name.includes(SKZ_TAB_AUTH_TOKEN)) {
+            window.name = window.name ? `${window.name}|${SKZ_TAB_AUTH_TOKEN}` : SKZ_TAB_AUTH_TOKEN;
+        }
+    }
+
+    function isTabAuthenticated() {
+        return sessionStorage.getItem(SKZ_TAB_AUTH_KEY) === 'true' || window.name.includes(SKZ_TAB_AUTH_TOKEN);
+    }
+
+    function clearTabAuthenticated() {
+        sessionStorage.removeItem(SKZ_TAB_AUTH_KEY);
+        sessionStorage.removeItem(SKZ_TAB_USER_KEY);
+        window.name = window.name
+            .split('|')
+            .filter(value => value && value !== SKZ_TAB_AUTH_TOKEN)
+            .join('|');
+    }
+
+    function getCachedTabUser() {
+        try {
+            const user = JSON.parse(sessionStorage.getItem(SKZ_TAB_USER_KEY) || 'null');
+            return user?.username ? user : null;
+        } catch (error) {
+            return null;
+        }
+    }
+
     async function checkSession() {
         try {
             const res  = await fetch(`${SKZ_API}/me/`, { credentials: 'include' });
@@ -34,23 +88,47 @@ const Auth = (() => {
         return currentUser;
     }
 
+    function notifyAuthReady() {
+        authReady = true;
+        document.dispatchEvent(new CustomEvent('skz:auth-ready', { detail: currentUser }));
+    }
+
     // ── Login ────────────────────────────────────────────────────────────
     async function loginUser(username, password) {
-        const res  = await fetch(`${SKZ_API}/login/`, {
-            method:      'POST',
-            credentials: 'include',
-            headers:     {
-                'Content-Type': 'application/json',
-                'X-CSRFToken':  csrfToken || getCookie('csrftoken'),
-            },
-            body: JSON.stringify({ username, password }),
-        });
-        const data = await res.json();
-        if (res.ok) {
-            currentUser = data.user;
-            return { success: true, user: data.user };
+        try {
+            const res  = await fetch(`${SKZ_API}/login/`, {
+                method:      'POST',
+                credentials: 'include',
+                headers:     {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken':  csrfToken || getCookie('csrftoken'),
+                },
+                body: JSON.stringify({ username, password }),
+            });
+            const data = await readJsonResponse(res);
+            if (res.ok) {
+                currentUser = data.user;
+                markTabAuthenticated(currentUser);
+                return { success: true, user: data.user };
+            }
+            return { success: false, error: data.error || `Error del servidor (${res.status}).` };
+        } catch (error) {
+            return {
+                success: false,
+                error: `No se pudo conectar con el backend en ${SKZ_API_BASE}.`,
+            };
         }
-        return { success: false, error: data.error };
+    }
+
+    async function readJsonResponse(response) {
+        const text = await response.text();
+        if (!text) return {};
+
+        try {
+            return JSON.parse(text);
+        } catch (error) {
+            return { error: `Respuesta no valida del servidor (${response.status}).` };
+        }
     }
 
     // ── Logout ───────────────────────────────────────────────────────────
@@ -61,6 +139,7 @@ const Auth = (() => {
             headers:     { 'X-CSRFToken': csrfToken || getCookie('csrftoken') },
         });
         currentUser = null;
+        clearTabAuthenticated();
         // Volver a mostrar la pantalla de bloqueo
         showLockScreen();
     }
@@ -200,20 +279,53 @@ const Auth = (() => {
     // ── Inicialización ───────────────────────────────────────────────────
     async function init() {
         await fetchCSRF();
+
+        if (!isTabAuthenticated()) {
+            currentUser = null;
+            showLockScreen();
+            notifyAuthReady();
+            return;
+        }
+
         const user = await checkSession();
 
         if (user) {
             // Ya está autenticado: mostrar navbar y contenido normal
+            markTabAuthenticated(user);
             updateNavbar();
         } else {
             // No autenticado: bloquear toda la página
-            showLockScreen();
+            currentUser = getCachedTabUser();
+            markTabAuthenticated();
+            updateNavbar();
+        }
+
+        notifyAuthReady();
+    }
+
+    async function refreshSession() {
+        const user = await checkSession();
+        if (user) {
+            markTabAuthenticated(user);
+            updateNavbar();
+        }
+        return user;
+    }
+
+    function syncPageState() {
+        if (isTabAuthenticated()) {
+            hideLockScreen();
         }
     }
 
     return {
         init,
+        syncPageState,
+        refreshSession,
         getCurrentUser: () => currentUser,
+        isReady: () => authReady,
+        showLockScreen,
+        clearTabAuthenticated,
         getCookie,
         getCSRF: () => csrfToken || getCookie('csrftoken'),
         SKZ_API,
@@ -221,4 +333,5 @@ const Auth = (() => {
 })();
 
 document.addEventListener('DOMContentLoaded', () => Auth.init());
+window.addEventListener('pageshow', () => Auth.syncPageState());
 window.SKZAuth = Auth;
