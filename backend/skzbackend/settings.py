@@ -8,11 +8,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Raíz del proyecto frontend (un nivel arriba de backend/)
 FRONTEND_DIR = BASE_DIR.parent
 
-SECRET_KEY = 'django-skz-web-secret-key-change-in-production-2024'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-skz-web-secret-key-change-in-production-2024')
 
-DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '.onrender.com',
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -29,6 +33,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -77,10 +82,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # Sirve los archivos estáticos del frontend (css/, js/, images/, etc.)
 STATICFILES_DIRS = [FRONTEND_DIR]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# --- CORS: permite llamadas desde el mismo origen (localhost:8000) ---
-CORS_ALLOW_ALL_ORIGINS = False
+# --- CORS & CSRF: Soporte Dinámico y de Producción ---
+CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8000',
     'http://127.0.0.1:8000',
@@ -89,9 +95,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:8080',
     'http://127.0.0.1:8080',
 ]
-CORS_ALLOW_CREDENTIALS = True
 
-# --- CSRF: mismos orígenes de confianza ---
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
     'http://127.0.0.1:8000',
@@ -101,8 +105,25 @@ CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8080',
 ]
 
-# --- Sesiones ---
-SESSION_COOKIE_SAMESITE = 'Lax'
+# Obtener URL del Frontend en producción si está declarada
+FRONTEND_URL = os.environ.get('FRONTEND_URL')
+if FRONTEND_URL:
+    CORS_ALLOWED_ORIGINS.append(FRONTEND_URL)
+    CSRF_TRUSTED_ORIGINS.append(FRONTEND_URL)
+
+# --- Sesiones & Cookies de Origen Cruzado (Vercel -> Render) ---
+# Si estamos en producción (DEBUG=False), habilitar SameSite=None y Secure=True
+if not DEBUG:
+    SESSION_COOKIE_SAMESITE = 'None'
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SAMESITE = 'None'
+    CSRF_COOKIE_SECURE = True
+else:
+    SESSION_COOKIE_SAMESITE = 'Lax'
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SAMESITE = 'Lax'
+    CSRF_COOKIE_SECURE = False
+
 SESSION_COOKIE_HTTPONLY = True
 
 # --- Django REST Framework ---
