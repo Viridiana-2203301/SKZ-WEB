@@ -8,15 +8,27 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Raíz del proyecto frontend (un nivel arriba de backend/)
 FRONTEND_DIR = BASE_DIR.parent
 
+
+def env_list(name, default=''):
+    return [
+        item.strip()
+        for item in os.environ.get(name, default).split(',')
+        if item.strip()
+    ]
+
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-skz-web-secret-key-change-in-production-2024')
 
 DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = [
+ALLOWED_HOSTS = env_list('DJANGO_ALLOWED_HOSTS') or [
     'localhost',
     '127.0.0.1',
     '.onrender.com',
 ]
+
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -125,6 +137,7 @@ else:
     CSRF_COOKIE_SECURE = False
 
 SESSION_COOKIE_HTTPONLY = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # --- Django REST Framework ---
 REST_FRAMEWORK = {

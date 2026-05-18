@@ -25,6 +25,7 @@ env/
 # ── Django ──
 backend/staticfiles/
 backend/mediafiles/
+public/
 *.log
 
 # ── Sistema operativo ──
