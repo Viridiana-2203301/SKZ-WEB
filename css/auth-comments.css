@@ -18,10 +18,47 @@
 .skz-lock-bg {
     position: absolute;
     inset: 0;
+    overflow: hidden;
     background:
         radial-gradient(ellipse at 20% 30%, rgba(var(--primary-rgb, 200,0,0), 0.18) 0%, transparent 60%),
         radial-gradient(ellipse at 80% 70%, rgba(var(--primary-rgb, 200,0,0), 0.12) 0%, transparent 60%),
         #0a0a0a;
+}
+
+.skz-lock-bubble {
+    position: absolute;
+    left: var(--bubble-left);
+    bottom: -120px;
+    width: var(--bubble-size);
+    height: var(--bubble-size);
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 35% 28%, rgba(255,255,255,0.75), rgba(255,255,255,0.18) 18%, transparent 34%),
+        radial-gradient(circle at 65% 70%, rgba(var(--primary-rgb, 200,0,0), 0.38), rgba(var(--primary-rgb, 200,0,0), 0.08) 58%, transparent 72%);
+    border: 1px solid rgba(255,255,255,0.16);
+    box-shadow:
+        inset 0 0 16px rgba(255,255,255,0.08),
+        0 0 28px rgba(var(--primary-rgb, 200,0,0), 0.16);
+    opacity: 0;
+    animation: lockBubbleRise var(--bubble-duration) linear infinite;
+    animation-delay: var(--bubble-delay);
+}
+
+.skz-lock-bubble:nth-child(1) { --bubble-left: 8%;  --bubble-size: 38px; --bubble-duration: 13s; --bubble-delay: 0s; }
+.skz-lock-bubble:nth-child(2) { --bubble-left: 19%; --bubble-size: 64px; --bubble-duration: 18s; --bubble-delay: -7s; }
+.skz-lock-bubble:nth-child(3) { --bubble-left: 34%; --bubble-size: 28px; --bubble-duration: 12s; --bubble-delay: -3s; }
+.skz-lock-bubble:nth-child(4) { --bubble-left: 47%; --bubble-size: 74px; --bubble-duration: 20s; --bubble-delay: -11s; }
+.skz-lock-bubble:nth-child(5) { --bubble-left: 61%; --bubble-size: 42px; --bubble-duration: 15s; --bubble-delay: -5s; }
+.skz-lock-bubble:nth-child(6) { --bubble-left: 73%; --bubble-size: 30px; --bubble-duration: 11s; --bubble-delay: -8s; }
+.skz-lock-bubble:nth-child(7) { --bubble-left: 84%; --bubble-size: 58px; --bubble-duration: 17s; --bubble-delay: -2s; }
+.skz-lock-bubble:nth-child(8) { --bubble-left: 92%; --bubble-size: 24px; --bubble-duration: 10s; --bubble-delay: -6s; }
+
+@keyframes lockBubbleRise {
+    0%   { opacity: 0; transform: translate3d(0, 0, 0) scale(0.75); }
+    12%  { opacity: 0.58; }
+    50%  { transform: translate3d(34px, -52vh, 0) scale(1); }
+    88%  { opacity: 0.45; }
+    100% { opacity: 0; transform: translate3d(-24px, -112vh, 0) scale(1.18); }
 }
 
 .skz-lock-card {

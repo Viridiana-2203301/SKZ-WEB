@@ -8,9 +8,13 @@ module.exports = async function handler(request, response) {
 
   const targetBase = backendUrl.replace(/\/$/, '');
   const originalUrl = new URL(request.url, `https://${request.headers.host}`);
-  const backendPath = originalUrl.pathname.endsWith('/')
+  const backendBasePath = new URL(targetBase).pathname.replace(/\/$/, '');
+  const incomingPath = originalUrl.pathname.endsWith('/')
     ? originalUrl.pathname
     : `${originalUrl.pathname}/`;
+  const backendPath = backendBasePath === '/api' && incomingPath.startsWith('/api/')
+    ? incomingPath.replace(/^\/api/, '')
+    : incomingPath;
   const targetUrl = new URL(`${targetBase}${backendPath}${originalUrl.search}`);
   const headers = new Headers();
 

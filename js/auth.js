@@ -210,7 +210,16 @@ const Auth = (() => {
         screen = document.createElement('div');
         screen.id = 'skz-lock-screen';
         screen.innerHTML = `
-            <div class="skz-lock-bg"></div>
+            <div class="skz-lock-bg">
+                <span class="skz-lock-bubble"></span>
+                <span class="skz-lock-bubble"></span>
+                <span class="skz-lock-bubble"></span>
+                <span class="skz-lock-bubble"></span>
+                <span class="skz-lock-bubble"></span>
+                <span class="skz-lock-bubble"></span>
+                <span class="skz-lock-bubble"></span>
+                <span class="skz-lock-bubble"></span>
+            </div>
             <div class="skz-lock-card">
                 <div class="skz-lock-logo">
                     <i class="fas fa-play"></i>
